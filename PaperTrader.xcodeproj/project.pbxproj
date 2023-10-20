@@ -1,0 +1,1282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F3BDBDB37360273EA2215C /* Pods_PaperTrader_PaperTraderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C2A7308984B1FDAFEDCDD3 /* Pods_PaperTrader_PaperTraderUITests.framework */; };
+		305BBC832ADC10DC00558312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC822ADC10DC00558312 /* AppDelegate.swift */; };
+		305BBC852ADC10DC00558312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC842ADC10DC00558312 /* SceneDelegate.swift */; };
+		305BBC872ADC10DC00558312 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC862ADC10DC00558312 /* ViewController.swift */; };
+		305BBC8A2ADC10DC00558312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBC882ADC10DC00558312 /* Main.storyboard */; };
+		305BBC8D2ADC10DC00558312 /* PaperTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC8B2ADC10DC00558312 /* PaperTrader.xcdatamodeld */; };
+		305BBC8F2ADC10DD00558312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305BBC8E2ADC10DD00558312 /* Assets.xcassets */; };
+		305BBC922ADC10DD00558312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBC902ADC10DD00558312 /* LaunchScreen.storyboard */; };
+		305BBC9D2ADC10DD00558312 /* PaperTraderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC9C2ADC10DD00558312 /* PaperTraderTests.swift */; };
+		305BBCA72ADC10DD00558312 /* PaperTraderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCA62ADC10DD00558312 /* PaperTraderUITests.swift */; };
+		305BBCA92ADC10DD00558312 /* PaperTraderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCA82ADC10DD00558312 /* PaperTraderUITestsLaunchTests.swift */; };
+		305BBCB72ADC15F200558312 /* SwiftUI+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCB62ADC15F200558312 /* SwiftUI+UIKit.swift */; };
+		305BBCB92ADC160B00558312 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCB82ADC160B00558312 /* ColorTheme.swift */; };
+		305BBCBB2ADC162100558312 /* Date_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCBA2ADC162100558312 /* Date_Ext.swift */; };
+		305BBCBE2ADC163F00558312 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCBD2ADC163F00558312 /* Navigation.swift */; };
+		305BBCC02ADC164700558312 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCBF2ADC164700558312 /* Auth.swift */; };
+		305BBCC22ADC165500558312 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCC12ADC165500558312 /* UserManager.swift */; };
+		305BBCC52ADC16BA00558312 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCC42ADC16BA00558312 /* User.swift */; };
+		305BBCCB2ADC172500558312 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCCA2ADC172500558312 /* TabViewController.swift */; };
+		305BBCCD2ADC174400558312 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCCC2ADC174400558312 /* Container.storyboard */; };
+		305BBCD02ADC17F500558312 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCCF2ADC17F500558312 /* HomeViewController.swift */; };
+		305BBCD22ADC1C5800558312 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */; };
+		305BBCD42ADC1CA700558312 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCD32ADC1CA700558312 /* AuthStoryboard.storyboard */; };
+		305BBCD82ADC1D5300558312 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCD72ADC1D5300558312 /* SignInView.swift */; };
+		305BBCDA2ADC1D6700558312 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCD92ADC1D6700558312 /* SignInViewController.swift */; };
+		307D59482ADE201A0084CDAC /* StockChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D59472ADE201A0084CDAC /* StockChartViewModel.swift */; };
+		307D594A2ADE204F0084CDAC /* StockJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D59492ADE204F0084CDAC /* StockJSONModel.swift */; };
+		307D594D2ADE20700084CDAC /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D594C2ADE20700084CDAC /* StockChartView.swift */; };
+		307D594F2ADE20870084CDAC /* StockTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D594E2ADE20870084CDAC /* StockTradeView.swift */; };
+		30E023A42ADC328A00D6770E /* HTTPTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 30E023A32ADC328A00D6770E /* HTTPTypes */; };
+		30E023A62ADC328A00D6770E /* HTTPTypesFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 30E023A52ADC328A00D6770E /* HTTPTypesFoundation */; };
+		30E023A92ADC363600D6770E /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E023A82ADC363600D6770E /* HomeStoryboard.storyboard */; };
+		30E023AB2ADC406200D6770E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023AA2ADC406200D6770E /* HomeView.swift */; };
+		30E023AD2ADC421000D6770E /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023AC2ADC421000D6770E /* JSON.swift */; };
+		30E023AF2ADC49C100D6770E /* DimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023AE2ADC49C100D6770E /* DimView.swift */; };
+		30E023B12ADDA9D500D6770E /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023B02ADDA9D500D6770E /* Stock.swift */; };
+		30E023B42ADDAA1A00D6770E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023B32ADDAA1A00D6770E /* HomeViewModel.swift */; };
+		30E023B62ADDAC7C00D6770E /* StockListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023B52ADDAC7C00D6770E /* StockListItem.swift */; };
+		30E023B82ADDADC600D6770E /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023B72ADDADC600D6770E /* StockViewController.swift */; };
+		30E023BA2ADDAF3300D6770E /* StockPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023B92ADDAF3300D6770E /* StockPage.swift */; };
+		30E023BC2ADDB00200D6770E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023BB2ADDB00200D6770E /* Comment.swift */; };
+		30E023BE2ADDB08A00D6770E /* StockPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023BD2ADDB08A00D6770E /* StockPageViewModel.swift */; };
+		30E023C02ADDB0B500D6770E /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023BF2ADDB0B500D6770E /* StockManager.swift */; };
+		30E023C42ADDB5A000D6770E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023C32ADDB5A000D6770E /* CommentView.swift */; };
+		30E023C82ADDB66B00D6770E /* ResizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023C72ADDB66B00D6770E /* ResizableTextField.swift */; };
+		B9809435CC07154D328C0478 /* Pods_PaperTrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A4AA58309B1E9BA3873019 /* Pods_PaperTrader.framework */; };
+		EC21A4367C0C3296FDE552B7 /* Pods_PaperTraderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57E7F69E34417F3E678DBB8 /* Pods_PaperTraderTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305BBC992ADC10DD00558312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305BBC772ADC10DC00558312 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305BBC7E2ADC10DC00558312;
+			remoteInfo = PaperTrader;
+		};
+		305BBCA32ADC10DD00558312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305BBC772ADC10DC00558312 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305BBC7E2ADC10DC00558312;
+			remoteInfo = PaperTrader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F56E46654B624ED8C27A264 /* Pods-PaperTraderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTraderTests.release.xcconfig"; path = "Target Support Files/Pods-PaperTraderTests/Pods-PaperTraderTests.release.xcconfig"; sourceTree = "<group>"; };
+		22E36AC428E847F7E0AE436E /* Pods-PaperTrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader.debug.xcconfig"; path = "Target Support Files/Pods-PaperTrader/Pods-PaperTrader.debug.xcconfig"; sourceTree = "<group>"; };
+		24C2A7308984B1FDAFEDCDD3 /* Pods_PaperTrader_PaperTraderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTrader_PaperTraderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		305BBC7F2ADC10DC00558312 /* PaperTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		305BBC822ADC10DC00558312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		305BBC842ADC10DC00558312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		305BBC862ADC10DC00558312 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		305BBC892ADC10DC00558312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		305BBC8C2ADC10DC00558312 /* PaperTrader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaperTrader.xcdatamodel; sourceTree = "<group>"; };
+		305BBC8E2ADC10DD00558312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		305BBC912ADC10DD00558312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		305BBC932ADC10DD00558312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305BBC982ADC10DD00558312 /* PaperTraderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperTraderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		305BBC9C2ADC10DD00558312 /* PaperTraderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperTraderTests.swift; sourceTree = "<group>"; };
+		305BBCA22ADC10DD00558312 /* PaperTraderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperTraderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		305BBCA62ADC10DD00558312 /* PaperTraderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperTraderUITests.swift; sourceTree = "<group>"; };
+		305BBCA82ADC10DD00558312 /* PaperTraderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperTraderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		305BBCB62ADC15F200558312 /* SwiftUI+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+UIKit.swift"; sourceTree = "<group>"; };
+		305BBCB82ADC160B00558312 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		305BBCBA2ADC162100558312 /* Date_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_Ext.swift; sourceTree = "<group>"; };
+		305BBCBD2ADC163F00558312 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		305BBCBF2ADC164700558312 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		305BBCC12ADC165500558312 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		305BBCC42ADC16BA00558312 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		305BBCCA2ADC172500558312 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		305BBCCC2ADC174400558312 /* Container.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
+		305BBCCF2ADC17F500558312 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		305BBCD32ADC1CA700558312 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		305BBCD72ADC1D5300558312 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		305BBCD92ADC1D6700558312 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		307D59472ADE201A0084CDAC /* StockChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartViewModel.swift; sourceTree = "<group>"; };
+		307D59492ADE204F0084CDAC /* StockJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockJSONModel.swift; sourceTree = "<group>"; };
+		307D594C2ADE20700084CDAC /* StockChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartView.swift; sourceTree = "<group>"; };
+		307D594E2ADE20870084CDAC /* StockTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradeView.swift; sourceTree = "<group>"; };
+		30E023A82ADC363600D6770E /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		30E023AA2ADC406200D6770E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30E023AC2ADC421000D6770E /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		30E023AE2ADC49C100D6770E /* DimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimView.swift; sourceTree = "<group>"; };
+		30E023B02ADDA9D500D6770E /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		30E023B32ADDAA1A00D6770E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30E023B52ADDAC7C00D6770E /* StockListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListItem.swift; sourceTree = "<group>"; };
+		30E023B72ADDADC600D6770E /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		30E023B92ADDAF3300D6770E /* StockPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPage.swift; sourceTree = "<group>"; };
+		30E023BB2ADDB00200D6770E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		30E023BD2ADDB08A00D6770E /* StockPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageViewModel.swift; sourceTree = "<group>"; };
+		30E023BF2ADDB0B500D6770E /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		30E023C32ADDB5A000D6770E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		30E023C72ADDB66B00D6770E /* ResizableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableTextField.swift; sourceTree = "<group>"; };
+		34DFE6FDA132BEB91B91D387 /* Pods-PaperTrader-PaperTraderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader-PaperTraderUITests.release.xcconfig"; path = "Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		407098B899AD7808AAB67C17 /* Pods-PaperTraderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTraderTests.debug.xcconfig"; path = "Target Support Files/Pods-PaperTraderTests/Pods-PaperTraderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44A4AA58309B1E9BA3873019 /* Pods_PaperTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E997F67D093E075175D4A8 /* Pods-PaperTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader.release.xcconfig"; path = "Target Support Files/Pods-PaperTrader/Pods-PaperTrader.release.xcconfig"; sourceTree = "<group>"; };
+		A57E7F69E34417F3E678DBB8 /* Pods_PaperTraderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTraderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A6F1820E3936C4F35B9EDE /* Pods-PaperTrader-PaperTraderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader-PaperTraderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		305BBC7C2ADC10DC00558312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E023A42ADC328A00D6770E /* HTTPTypes in Frameworks */,
+				30E023A62ADC328A00D6770E /* HTTPTypesFoundation in Frameworks */,
+				B9809435CC07154D328C0478 /* Pods_PaperTrader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBC952ADC10DD00558312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC21A4367C0C3296FDE552B7 /* Pods_PaperTraderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBC9F2ADC10DD00558312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F3BDBDB37360273EA2215C /* Pods_PaperTrader_PaperTraderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F50AE96F41F6601B6E565A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44A4AA58309B1E9BA3873019 /* Pods_PaperTrader.framework */,
+				24C2A7308984B1FDAFEDCDD3 /* Pods_PaperTrader_PaperTraderUITests.framework */,
+				A57E7F69E34417F3E678DBB8 /* Pods_PaperTraderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		305BBC762ADC10DC00558312 = {
+			isa = PBXGroup;
+			children = (
+				305BBC812ADC10DC00558312 /* PaperTrader */,
+				305BBC9B2ADC10DD00558312 /* PaperTraderTests */,
+				305BBCA52ADC10DD00558312 /* PaperTraderUITests */,
+				305BBC802ADC10DC00558312 /* Products */,
+				B2646B4DA04764EC4C2B0883 /* Pods */,
+				1F50AE96F41F6601B6E565A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		305BBC802ADC10DC00558312 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305BBC7F2ADC10DC00558312 /* PaperTrader.app */,
+				305BBC982ADC10DD00558312 /* PaperTraderTests.xctest */,
+				305BBCA22ADC10DD00558312 /* PaperTraderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		305BBC812ADC10DC00558312 /* PaperTrader */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCC62ADC16CB00558312 /* Client */,
+				305BBCC32ADC169E00558312 /* Model */,
+				305BBCBC2ADC163100558312 /* Manager */,
+				305BBCB52ADC15DB00558312 /* Helper */,
+				305BBC822ADC10DC00558312 /* AppDelegate.swift */,
+				305BBC842ADC10DC00558312 /* SceneDelegate.swift */,
+				305BBC862ADC10DC00558312 /* ViewController.swift */,
+				305BBC882ADC10DC00558312 /* Main.storyboard */,
+				305BBC8E2ADC10DD00558312 /* Assets.xcassets */,
+				305BBC902ADC10DD00558312 /* LaunchScreen.storyboard */,
+				305BBC932ADC10DD00558312 /* Info.plist */,
+				305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */,
+				305BBC8B2ADC10DC00558312 /* PaperTrader.xcdatamodeld */,
+			);
+			path = PaperTrader;
+			sourceTree = "<group>";
+		};
+		305BBC9B2ADC10DD00558312 /* PaperTraderTests */ = {
+			isa = PBXGroup;
+			children = (
+				305BBC9C2ADC10DD00558312 /* PaperTraderTests.swift */,
+			);
+			path = PaperTraderTests;
+			sourceTree = "<group>";
+		};
+		305BBCA52ADC10DD00558312 /* PaperTraderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCA62ADC10DD00558312 /* PaperTraderUITests.swift */,
+				305BBCA82ADC10DD00558312 /* PaperTraderUITestsLaunchTests.swift */,
+			);
+			path = PaperTraderUITests;
+			sourceTree = "<group>";
+		};
+		305BBCB52ADC15DB00558312 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCB62ADC15F200558312 /* SwiftUI+UIKit.swift */,
+				305BBCB82ADC160B00558312 /* ColorTheme.swift */,
+				305BBCBA2ADC162100558312 /* Date_Ext.swift */,
+				30E023AC2ADC421000D6770E /* JSON.swift */,
+				30E023AE2ADC49C100D6770E /* DimView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		305BBCBC2ADC163100558312 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCBD2ADC163F00558312 /* Navigation.swift */,
+				305BBCBF2ADC164700558312 /* Auth.swift */,
+				305BBCC12ADC165500558312 /* UserManager.swift */,
+				30E023BF2ADDB0B500D6770E /* StockManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		305BBCC32ADC169E00558312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCC42ADC16BA00558312 /* User.swift */,
+				30E023B02ADDA9D500D6770E /* Stock.swift */,
+				30E023BB2ADDB00200D6770E /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		305BBCC62ADC16CB00558312 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				307D59462ADE200E0084CDAC /* Chart */,
+				305BBCC92ADC16F500558312 /* Home */,
+				305BBCC82ADC16E000558312 /* Auth */,
+				305BBCC72ADC16DB00558312 /* Navigation */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		305BBCC72ADC16DB00558312 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCCA2ADC172500558312 /* TabViewController.swift */,
+				305BBCCC2ADC174400558312 /* Container.storyboard */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		305BBCC82ADC16E000558312 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCD62ADC1CDB00558312 /* View */,
+				305BBCD52ADC1CD400558312 /* Controller */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		305BBCC92ADC16F500558312 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30E023B22ADDAA0E00D6770E /* ViewModel */,
+				30E023A72ADC362500D6770E /* View */,
+				305BBCCE2ADC17DA00558312 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		305BBCCE2ADC17DA00558312 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCCF2ADC17F500558312 /* HomeViewController.swift */,
+				30E023B72ADDADC600D6770E /* StockViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		305BBCD52ADC1CD400558312 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCD92ADC1D6700558312 /* SignInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		305BBCD62ADC1CDB00558312 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				305BBCD32ADC1CA700558312 /* AuthStoryboard.storyboard */,
+				305BBCD72ADC1D5300558312 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307D59462ADE200E0084CDAC /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				307D59522ADEBE430084CDAC /* ViewModel */,
+				307D594B2ADE20660084CDAC /* View */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		307D594B2ADE20660084CDAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				307D594E2ADE20870084CDAC /* StockTradeView.swift */,
+				307D594C2ADE20700084CDAC /* StockChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307D59522ADEBE430084CDAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				307D59472ADE201A0084CDAC /* StockChartViewModel.swift */,
+				307D59492ADE204F0084CDAC /* StockJSONModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30E023A72ADC362500D6770E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30E023C62ADDB65200D6770E /* Screens */,
+				30E023C52ADDB64700D6770E /* Components */,
+				30E023A82ADC363600D6770E /* HomeStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30E023B22ADDAA0E00D6770E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30E023B32ADDAA1A00D6770E /* HomeViewModel.swift */,
+				30E023BD2ADDB08A00D6770E /* StockPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30E023C52ADDB64700D6770E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30E023C32ADDB5A000D6770E /* CommentView.swift */,
+				30E023B52ADDAC7C00D6770E /* StockListItem.swift */,
+				30E023C72ADDB66B00D6770E /* ResizableTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30E023C62ADDB65200D6770E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				30E023AA2ADC406200D6770E /* HomeView.swift */,
+				30E023B92ADDAF3300D6770E /* StockPage.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B2646B4DA04764EC4C2B0883 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22E36AC428E847F7E0AE436E /* Pods-PaperTrader.debug.xcconfig */,
+				57E997F67D093E075175D4A8 /* Pods-PaperTrader.release.xcconfig */,
+				E6A6F1820E3936C4F35B9EDE /* Pods-PaperTrader-PaperTraderUITests.debug.xcconfig */,
+				34DFE6FDA132BEB91B91D387 /* Pods-PaperTrader-PaperTraderUITests.release.xcconfig */,
+				407098B899AD7808AAB67C17 /* Pods-PaperTraderTests.debug.xcconfig */,
+				1F56E46654B624ED8C27A264 /* Pods-PaperTraderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		305BBC7E2ADC10DC00558312 /* PaperTrader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305BBCAC2ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTrader" */;
+			buildPhases = (
+				E11EB38182B746CF1DF62F9F /* [CP] Check Pods Manifest.lock */,
+				305BBC7B2ADC10DC00558312 /* Sources */,
+				305BBC7C2ADC10DC00558312 /* Frameworks */,
+				305BBC7D2ADC10DC00558312 /* Resources */,
+				B3D70246BDC7DAD769ADC89E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaperTrader;
+			packageProductDependencies = (
+				30E023A32ADC328A00D6770E /* HTTPTypes */,
+				30E023A52ADC328A00D6770E /* HTTPTypesFoundation */,
+			);
+			productName = PaperTrader;
+			productReference = 305BBC7F2ADC10DC00558312 /* PaperTrader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		305BBC972ADC10DD00558312 /* PaperTraderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305BBCAF2ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTraderTests" */;
+			buildPhases = (
+				F80026A28AD1F15472DFFFBF /* [CP] Check Pods Manifest.lock */,
+				305BBC942ADC10DD00558312 /* Sources */,
+				305BBC952ADC10DD00558312 /* Frameworks */,
+				305BBC962ADC10DD00558312 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305BBC9A2ADC10DD00558312 /* PBXTargetDependency */,
+			);
+			name = PaperTraderTests;
+			productName = PaperTraderTests;
+			productReference = 305BBC982ADC10DD00558312 /* PaperTraderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		305BBCA12ADC10DD00558312 /* PaperTraderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305BBCB22ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTraderUITests" */;
+			buildPhases = (
+				0304C3030816307E7BB9DF17 /* [CP] Check Pods Manifest.lock */,
+				305BBC9E2ADC10DD00558312 /* Sources */,
+				305BBC9F2ADC10DD00558312 /* Frameworks */,
+				305BBCA02ADC10DD00558312 /* Resources */,
+				9AE4187C729A08DA9A61C27A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305BBCA42ADC10DD00558312 /* PBXTargetDependency */,
+			);
+			name = PaperTraderUITests;
+			productName = PaperTraderUITests;
+			productReference = 305BBCA22ADC10DD00558312 /* PaperTraderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		305BBC772ADC10DC00558312 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					305BBC7E2ADC10DC00558312 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					305BBC972ADC10DD00558312 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 305BBC7E2ADC10DC00558312;
+					};
+					305BBCA12ADC10DD00558312 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 305BBC7E2ADC10DC00558312;
+					};
+				};
+			};
+			buildConfigurationList = 305BBC7A2ADC10DC00558312 /* Build configuration list for PBXProject "PaperTrader" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 305BBC762ADC10DC00558312;
+			packageReferences = (
+				30E023A22ADC328A00D6770E /* XCRemoteSwiftPackageReference "swift-http-types" */,
+			);
+			productRefGroup = 305BBC802ADC10DC00558312 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305BBC7E2ADC10DC00558312 /* PaperTrader */,
+				305BBC972ADC10DD00558312 /* PaperTraderTests */,
+				305BBCA12ADC10DD00558312 /* PaperTraderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		305BBC7D2ADC10DC00558312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305BBC922ADC10DD00558312 /* LaunchScreen.storyboard in Resources */,
+				305BBC8F2ADC10DD00558312 /* Assets.xcassets in Resources */,
+				305BBCD22ADC1C5800558312 /* GoogleService-Info.plist in Resources */,
+				305BBCCD2ADC174400558312 /* Container.storyboard in Resources */,
+				30E023A92ADC363600D6770E /* HomeStoryboard.storyboard in Resources */,
+				305BBC8A2ADC10DC00558312 /* Main.storyboard in Resources */,
+				305BBCD42ADC1CA700558312 /* AuthStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBC962ADC10DD00558312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBCA02ADC10DD00558312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0304C3030816307E7BB9DF17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaperTrader-PaperTraderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE4187C729A08DA9A61C27A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D70246BDC7DAD769ADC89E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaperTrader/Pods-PaperTrader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaperTrader/Pods-PaperTrader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaperTrader/Pods-PaperTrader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E11EB38182B746CF1DF62F9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaperTrader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F80026A28AD1F15472DFFFBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaperTraderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		305BBC7B2ADC10DC00558312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307D594D2ADE20700084CDAC /* StockChartView.swift in Sources */,
+				305BBCCB2ADC172500558312 /* TabViewController.swift in Sources */,
+				305BBCB72ADC15F200558312 /* SwiftUI+UIKit.swift in Sources */,
+				30E023B12ADDA9D500D6770E /* Stock.swift in Sources */,
+				30E023B42ADDAA1A00D6770E /* HomeViewModel.swift in Sources */,
+				305BBC872ADC10DC00558312 /* ViewController.swift in Sources */,
+				305BBC832ADC10DC00558312 /* AppDelegate.swift in Sources */,
+				307D594A2ADE204F0084CDAC /* StockJSONModel.swift in Sources */,
+				305BBCBE2ADC163F00558312 /* Navigation.swift in Sources */,
+				305BBCBB2ADC162100558312 /* Date_Ext.swift in Sources */,
+				305BBCB92ADC160B00558312 /* ColorTheme.swift in Sources */,
+				30E023C82ADDB66B00D6770E /* ResizableTextField.swift in Sources */,
+				30E023C42ADDB5A000D6770E /* CommentView.swift in Sources */,
+				30E023BE2ADDB08A00D6770E /* StockPageViewModel.swift in Sources */,
+				305BBC8D2ADC10DC00558312 /* PaperTrader.xcdatamodeld in Sources */,
+				30E023C02ADDB0B500D6770E /* StockManager.swift in Sources */,
+				305BBCDA2ADC1D6700558312 /* SignInViewController.swift in Sources */,
+				30E023B82ADDADC600D6770E /* StockViewController.swift in Sources */,
+				307D59482ADE201A0084CDAC /* StockChartViewModel.swift in Sources */,
+				305BBCD82ADC1D5300558312 /* SignInView.swift in Sources */,
+				305BBC852ADC10DC00558312 /* SceneDelegate.swift in Sources */,
+				305BBCC22ADC165500558312 /* UserManager.swift in Sources */,
+				305BBCC02ADC164700558312 /* Auth.swift in Sources */,
+				30E023AB2ADC406200D6770E /* HomeView.swift in Sources */,
+				30E023AD2ADC421000D6770E /* JSON.swift in Sources */,
+				30E023AF2ADC49C100D6770E /* DimView.swift in Sources */,
+				30E023BC2ADDB00200D6770E /* Comment.swift in Sources */,
+				30E023B62ADDAC7C00D6770E /* StockListItem.swift in Sources */,
+				30E023BA2ADDAF3300D6770E /* StockPage.swift in Sources */,
+				305BBCD02ADC17F500558312 /* HomeViewController.swift in Sources */,
+				307D594F2ADE20870084CDAC /* StockTradeView.swift in Sources */,
+				305BBCC52ADC16BA00558312 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBC942ADC10DD00558312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305BBC9D2ADC10DD00558312 /* PaperTraderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305BBC9E2ADC10DD00558312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305BBCA72ADC10DD00558312 /* PaperTraderUITests.swift in Sources */,
+				305BBCA92ADC10DD00558312 /* PaperTraderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		305BBC9A2ADC10DD00558312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305BBC7E2ADC10DC00558312 /* PaperTrader */;
+			targetProxy = 305BBC992ADC10DD00558312 /* PBXContainerItemProxy */;
+		};
+		305BBCA42ADC10DD00558312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305BBC7E2ADC10DC00558312 /* PaperTrader */;
+			targetProxy = 305BBCA32ADC10DD00558312 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		305BBC882ADC10DC00558312 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305BBC892ADC10DC00558312 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		305BBC902ADC10DD00558312 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305BBC912ADC10DD00558312 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		305BBCAA2ADC10DD00558312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		305BBCAB2ADC10DD00558312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		305BBCAD2ADC10DD00558312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22E36AC428E847F7E0AE436E /* Pods-PaperTrader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PaperTrader/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseAuthInterop\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseCrashlytics\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseSessions\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleAppMeasurementIdentitySupport\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"Promises\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTrader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		305BBCAE2ADC10DD00558312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57E997F67D093E075175D4A8 /* Pods-PaperTrader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PaperTrader/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseAuthInterop\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseCrashlytics\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseSessions\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleAppMeasurementIdentitySupport\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"Promises\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTrader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		305BBCB02ADC10DD00558312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407098B899AD7808AAB67C17 /* Pods-PaperTraderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTraderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaperTrader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaperTrader";
+			};
+			name = Debug;
+		};
+		305BBCB12ADC10DD00558312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F56E46654B624ED8C27A264 /* Pods-PaperTraderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTraderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaperTrader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaperTrader";
+			};
+			name = Release;
+		};
+		305BBCB32ADC10DD00558312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A6F1820E3936C4F35B9EDE /* Pods-PaperTrader-PaperTraderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTraderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaperTrader;
+			};
+			name = Debug;
+		};
+		305BBCB42ADC10DD00558312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DFE6FDA132BEB91B91D387 /* Pods-PaperTrader-PaperTraderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8Q5FL7WS4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileapps.PaperTraderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaperTrader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		305BBC7A2ADC10DC00558312 /* Build configuration list for PBXProject "PaperTrader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305BBCAA2ADC10DD00558312 /* Debug */,
+				305BBCAB2ADC10DD00558312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305BBCAC2ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTrader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305BBCAD2ADC10DD00558312 /* Debug */,
+				305BBCAE2ADC10DD00558312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305BBCAF2ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTraderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305BBCB02ADC10DD00558312 /* Debug */,
+				305BBCB12ADC10DD00558312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305BBCB22ADC10DD00558312 /* Build configuration list for PBXNativeTarget "PaperTraderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305BBCB32ADC10DD00558312 /* Debug */,
+				305BBCB42ADC10DD00558312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30E023A22ADC328A00D6770E /* XCRemoteSwiftPackageReference "swift-http-types" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-http-types.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30E023A32ADC328A00D6770E /* HTTPTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E023A22ADC328A00D6770E /* XCRemoteSwiftPackageReference "swift-http-types" */;
+			productName = HTTPTypes;
+		};
+		30E023A52ADC328A00D6770E /* HTTPTypesFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E023A22ADC328A00D6770E /* XCRemoteSwiftPackageReference "swift-http-types" */;
+			productName = HTTPTypesFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		305BBC8B2ADC10DC00558312 /* PaperTrader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				305BBC8C2ADC10DC00558312 /* PaperTrader.xcdatamodel */,
+			);
+			currentVersion = 305BBC8C2ADC10DC00558312 /* PaperTrader.xcdatamodel */;
+			path = PaperTrader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 305BBC772ADC10DC00558312 /* Project object */;
+}
