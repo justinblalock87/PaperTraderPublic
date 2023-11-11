@@ -30,6 +30,7 @@ class StockPageViewModel: ObservableObject {
         Task.init {
             do {
                 try await StockManager.addComment(for: stock, content: textToSend)
+                try await fetchComments()
             } catch let error {
                 print("error sending comment")
             }

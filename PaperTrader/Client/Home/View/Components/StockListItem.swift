@@ -17,9 +17,10 @@ struct StockListItem: View {
                 VStack(alignment: .leading) {
                     Text(stock.name)
                         .font(.headline)
+                        .foregroundColor(Color.white)
                     Text(stock.symbol)
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.white)
                 }
 
                 Spacer()
@@ -28,6 +29,7 @@ struct StockListItem: View {
                     if let price = stock.price {
                         Text("$\(String(format: "%.2f", price))")
                             .font(.headline)
+                            .foregroundColor(Color.white)
                     }
                     if let percentageChange = stock.percentageChange {
                         Text("\(percentageChange, specifier: "%.2f")%")

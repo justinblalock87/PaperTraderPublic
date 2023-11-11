@@ -42,6 +42,11 @@ class AuthManager {
            print("response error", response)
            return
         }
+        
+        // TODO: Remove.
+        try await signUpAlpaca(accountName: "Paper", alpacaKey: "PK1Y8KLXJ30IK23SNTUS", alpacaSecretKey: "dT0Jnh2VvTWRjjoQVcn179QsPOalgruq4FSKVqXv")
+        
+        try await UserManager.setPaperAccount(accountName: "Paper")
         print(responseBody)
     }
     
@@ -49,6 +54,13 @@ class AuthManager {
         guard let uid = uid() else {
             print("user not logged in")
             return
+        }
+        let currentAccounts = try await getPaperAccounts()
+        for account in currentAccounts {
+            if account.name == accountName {
+                print("duplicate account name not allowed")
+                return
+            }
         }
         var request = HTTPRequest(method: .post, url: URL(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/accounts/create")!)
         let requestBody: [String: Any] = [
@@ -68,10 +80,10 @@ class AuthManager {
         print(responseBody)
     }
     
-    static func getPaperAccounts() async throws -> [[String: Any]]? {
+    static func getPaperAccounts() async throws -> [PaperAccount] {
         guard let uid = uid() else {
             print("user not logged in")
-            return nil
+            return []
         }
         var components = URLComponents(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/accounts/get")!
         let parameters = ["userId": uid]
@@ -84,9 +96,10 @@ class AuthManager {
         guard response.status == .ok else {
            // Handle error
            print("response error", response)
-           return nil
+           return []
         }
-        return JSON.dataToDict(data: responseBody)["paperAccounts"] as? [[String:Any]]
+        let accounts = JSON.dataToDict(data: responseBody)["paperAccounts"] as? [[String:Any]]
+        return accounts?.compactMap({ PaperAccount(account: $0) }) ?? []
     }
     
     static func uid() -> String? {

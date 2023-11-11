@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
                 self.performSegue(withIdentifier: "segueStock", sender: stock)
             }
         }
+        homeView.rootView.segueSettings = {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "segueSettings", sender: nil)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,9 +32,5 @@ class HomeViewController: UIViewController {
                 stockVC.stock = sender as? Stock
             }
         }
-    }
-    
-    @IBAction func logout(_ sender: Any) {
-        try! Auth.auth().signOut()
     }
 }

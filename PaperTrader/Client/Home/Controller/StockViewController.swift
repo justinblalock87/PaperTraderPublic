@@ -17,17 +17,19 @@ class StockViewController: UIViewController {
         self.title = stock.name
         
         let stockView = attachSwiftUIView(rootView: StockPage(stock: stock))
+        stockView.rootView.segueBuySell = { (action, stock) in
+            self.performSegue(withIdentifier: "segueBuySell", sender: (action, stock))
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueBuySell" {
+            if let buySellVC = segue.destination as? BuySellViewController {
+                if sender != nil, let (action, stock) = sender as? (String, Stock) {
+                    buySellVC.action = action
+                    buySellVC.stock = stock
+                }
+            }
+        }
     }
-    */
-
 }

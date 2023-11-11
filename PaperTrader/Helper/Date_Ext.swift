@@ -37,10 +37,29 @@ extension Date {
         dateFormatter.dateFormat = "MMM d"
         return dateFormatter.string(from: self)
     }
+    
+    func monthDayYear() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
+    func day() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        return dateFormatter.string(from: self)
+    }
 }
 
 extension Int {
     func getDate() -> Date {
         return Date(timeIntervalSince1970: TimeInterval(self))
+    }
+}
+
+extension String {
+    func getDate() -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.date(from: self)
     }
 }

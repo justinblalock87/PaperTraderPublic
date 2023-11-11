@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		07F3BDBDB37360273EA2215C /* Pods_PaperTrader_PaperTraderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C2A7308984B1FDAFEDCDD3 /* Pods_PaperTrader_PaperTraderUITests.framework */; };
+		300BC06B2AFC0B370066580A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BC06A2AFC0B370066580A /* Analytics.swift */; };
+		3024EEA52AF7154F00C4D8B6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEA42AF7154F00C4D8B6 /* ProfileView.swift */; };
+		3024EEA72AF7155B00C4D8B6 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3024EEA62AF7155B00C4D8B6 /* ProfileStoryboard.storyboard */; };
+		3024EEA92AF7156900C4D8B6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEA82AF7156900C4D8B6 /* ProfileViewController.swift */; };
+		3024EEAB2AF7157500C4D8B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEAA2AF7157500C4D8B6 /* SettingsViewController.swift */; };
+		3024EEAF2AF71ABE00C4D8B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEAE2AF71ABD00C4D8B6 /* SettingsView.swift */; };
+		3024EEB12AF71B9200C4D8B6 /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEB02AF71B9200C4D8B6 /* CustomFonts.swift */; };
+		3024EEB32AF71F3900C4D8B6 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEB22AF71F3900C4D8B6 /* Error.swift */; };
+		3024EEB72AF823F800C4D8B6 /* ManageAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEB62AF823F800C4D8B6 /* ManageAccountsView.swift */; };
+		3024EEB92AF8247700C4D8B6 /* ManageAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEB82AF8247700C4D8B6 /* ManageAccountsViewController.swift */; };
+		3024EEBB2AF8278B00C4D8B6 /* PaperAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEBA2AF8278B00C4D8B6 /* PaperAccount.swift */; };
+		3024EEBE2AF82A2100C4D8B6 /* PaperAccountListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEBD2AF82A2100C4D8B6 /* PaperAccountListItem.swift */; };
+		3024EEC02AF879C900C4D8B6 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEBF2AF879C900C4D8B6 /* CustomPicker.swift */; };
+		3024EEC22AF886F400C4D8B6 /* BuySellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEC12AF886F400C4D8B6 /* BuySellViewController.swift */; };
+		3024EEC42AF8874D00C4D8B6 /* BuySellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEC32AF8874D00C4D8B6 /* BuySellView.swift */; };
+		3024EEC62AF8896700C4D8B6 /* Numpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEC52AF8896700C4D8B6 /* Numpad.swift */; };
+		3024EEC92AF9D6C600C4D8B6 /* PortfolioChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EEC82AF9D6C600C4D8B6 /* PortfolioChartView.swift */; };
+		3024EECB2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EECA2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift */; };
+		3024EECD2AFAA31700C4D8B6 /* RemoteConfigListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EECC2AFAA31700C4D8B6 /* RemoteConfigListener.swift */; };
+		3024EECF2AFAC28600C4D8B6 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EECE2AFAC28600C4D8B6 /* ProfileImageView.swift */; };
+		3024EED12AFAC5FE00C4D8B6 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024EED02AFAC5FE00C4D8B6 /* NewsView.swift */; };
+		3024EED32AFB299C00C4D8B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3024EED22AFB299C00C4D8B6 /* GoogleService-Info.plist */; };
 		305BBC832ADC10DC00558312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC822ADC10DC00558312 /* AppDelegate.swift */; };
 		305BBC852ADC10DC00558312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC842ADC10DC00558312 /* SceneDelegate.swift */; };
 		305BBC872ADC10DC00558312 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBC862ADC10DC00558312 /* ViewController.swift */; };
@@ -28,7 +50,6 @@
 		305BBCCB2ADC172500558312 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCCA2ADC172500558312 /* TabViewController.swift */; };
 		305BBCCD2ADC174400558312 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCCC2ADC174400558312 /* Container.storyboard */; };
 		305BBCD02ADC17F500558312 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCCF2ADC17F500558312 /* HomeViewController.swift */; };
-		305BBCD22ADC1C5800558312 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */; };
 		305BBCD42ADC1CA700558312 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305BBCD32ADC1CA700558312 /* AuthStoryboard.storyboard */; };
 		305BBCD82ADC1D5300558312 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCD72ADC1D5300558312 /* SignInView.swift */; };
 		305BBCDA2ADC1D6700558312 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BBCD92ADC1D6700558312 /* SignInViewController.swift */; };
@@ -77,6 +98,28 @@
 		1F56E46654B624ED8C27A264 /* Pods-PaperTraderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTraderTests.release.xcconfig"; path = "Target Support Files/Pods-PaperTraderTests/Pods-PaperTraderTests.release.xcconfig"; sourceTree = "<group>"; };
 		22E36AC428E847F7E0AE436E /* Pods-PaperTrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader.debug.xcconfig"; path = "Target Support Files/Pods-PaperTrader/Pods-PaperTrader.debug.xcconfig"; sourceTree = "<group>"; };
 		24C2A7308984B1FDAFEDCDD3 /* Pods_PaperTrader_PaperTraderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTrader_PaperTraderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		300BC06A2AFC0B370066580A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		3024EEA42AF7154F00C4D8B6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3024EEA62AF7155B00C4D8B6 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		3024EEA82AF7156900C4D8B6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3024EEAA2AF7157500C4D8B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3024EEAE2AF71ABD00C4D8B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3024EEB02AF71B9200C4D8B6 /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
+		3024EEB22AF71F3900C4D8B6 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		3024EEB62AF823F800C4D8B6 /* ManageAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountsView.swift; sourceTree = "<group>"; };
+		3024EEB82AF8247700C4D8B6 /* ManageAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountsViewController.swift; sourceTree = "<group>"; };
+		3024EEBA2AF8278B00C4D8B6 /* PaperAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperAccount.swift; sourceTree = "<group>"; };
+		3024EEBD2AF82A2100C4D8B6 /* PaperAccountListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperAccountListItem.swift; sourceTree = "<group>"; };
+		3024EEBF2AF879C900C4D8B6 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		3024EEC12AF886F400C4D8B6 /* BuySellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySellViewController.swift; sourceTree = "<group>"; };
+		3024EEC32AF8874D00C4D8B6 /* BuySellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySellView.swift; sourceTree = "<group>"; };
+		3024EEC52AF8896700C4D8B6 /* Numpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numpad.swift; sourceTree = "<group>"; };
+		3024EEC82AF9D6C600C4D8B6 /* PortfolioChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioChartView.swift; sourceTree = "<group>"; };
+		3024EECA2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		3024EECC2AFAA31700C4D8B6 /* RemoteConfigListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigListener.swift; sourceTree = "<group>"; };
+		3024EECE2AFAC28600C4D8B6 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		3024EED02AFAC5FE00C4D8B6 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		3024EED22AFB299C00C4D8B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		305BBC7F2ADC10DC00558312 /* PaperTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305BBC822ADC10DC00558312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305BBC842ADC10DC00558312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +144,6 @@
 		305BBCCA2ADC172500558312 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		305BBCCC2ADC174400558312 /* Container.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
 		305BBCCF2ADC17F500558312 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		305BBCD32ADC1CA700558312 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
 		305BBCD72ADC1D5300558312 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		305BBCD92ADC1D6700558312 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +213,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3024EEA32AF714E500C4D8B6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3024EEAD2AF7158300C4D8B6 /* View */,
+				3024EEAC2AF7157A00C4D8B6 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3024EEAC2AF7157A00C4D8B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3024EEA82AF7156900C4D8B6 /* ProfileViewController.swift */,
+				3024EEAA2AF7157500C4D8B6 /* SettingsViewController.swift */,
+				3024EEB82AF8247700C4D8B6 /* ManageAccountsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3024EEAD2AF7158300C4D8B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3024EEBC2AF829FB00C4D8B6 /* Components */,
+				3024EEA42AF7154F00C4D8B6 /* ProfileView.swift */,
+				3024EEAE2AF71ABD00C4D8B6 /* SettingsView.swift */,
+				3024EEB62AF823F800C4D8B6 /* ManageAccountsView.swift */,
+				3024EEA62AF7155B00C4D8B6 /* ProfileStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3024EEBC2AF829FB00C4D8B6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3024EEBD2AF82A2100C4D8B6 /* PaperAccountListItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3024EEC72AF9D6B300C4D8B6 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				3024EEC82AF9D6C600C4D8B6 /* PortfolioChartView.swift */,
+				3024EECA2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
 		305BBC762ADC10DC00558312 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +297,7 @@
 				305BBC8E2ADC10DD00558312 /* Assets.xcassets */,
 				305BBC902ADC10DD00558312 /* LaunchScreen.storyboard */,
 				305BBC932ADC10DD00558312 /* Info.plist */,
-				305BBCD12ADC1C5800558312 /* GoogleService-Info.plist */,
+				3024EED22AFB299C00C4D8B6 /* GoogleService-Info.plist */,
 				305BBC8B2ADC10DC00558312 /* PaperTrader.xcdatamodeld */,
 			);
 			path = PaperTrader;
@@ -238,6 +328,9 @@
 				305BBCBA2ADC162100558312 /* Date_Ext.swift */,
 				30E023AC2ADC421000D6770E /* JSON.swift */,
 				30E023AE2ADC49C100D6770E /* DimView.swift */,
+				3024EEB02AF71B9200C4D8B6 /* CustomFonts.swift */,
+				3024EEB22AF71F3900C4D8B6 /* Error.swift */,
+				300BC06A2AFC0B370066580A /* Analytics.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -249,6 +342,7 @@
 				305BBCBF2ADC164700558312 /* Auth.swift */,
 				305BBCC12ADC165500558312 /* UserManager.swift */,
 				30E023BF2ADDB0B500D6770E /* StockManager.swift */,
+				3024EECC2AFAA31700C4D8B6 /* RemoteConfigListener.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -259,6 +353,7 @@
 				305BBCC42ADC16BA00558312 /* User.swift */,
 				30E023B02ADDA9D500D6770E /* Stock.swift */,
 				30E023BB2ADDB00200D6770E /* Comment.swift */,
+				3024EEBA2AF8278B00C4D8B6 /* PaperAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +361,7 @@
 		305BBCC62ADC16CB00558312 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				3024EEA32AF714E500C4D8B6 /* Profile */,
 				307D59462ADE200E0084CDAC /* Chart */,
 				305BBCC92ADC16F500558312 /* Home */,
 				305BBCC82ADC16E000558312 /* Auth */,
@@ -307,6 +403,7 @@
 			children = (
 				305BBCCF2ADC17F500558312 /* HomeViewController.swift */,
 				30E023B72ADDADC600D6770E /* StockViewController.swift */,
+				3024EEC12AF886F400C4D8B6 /* BuySellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,6 +428,7 @@
 		307D59462ADE200E0084CDAC /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				3024EEC72AF9D6B300C4D8B6 /* Portfolio */,
 				307D59522ADEBE430084CDAC /* ViewModel */,
 				307D594B2ADE20660084CDAC /* View */,
 			);
@@ -380,6 +478,10 @@
 				30E023C32ADDB5A000D6770E /* CommentView.swift */,
 				30E023B52ADDAC7C00D6770E /* StockListItem.swift */,
 				30E023C72ADDB66B00D6770E /* ResizableTextField.swift */,
+				3024EEBF2AF879C900C4D8B6 /* CustomPicker.swift */,
+				3024EEC52AF8896700C4D8B6 /* Numpad.swift */,
+				3024EECE2AFAC28600C4D8B6 /* ProfileImageView.swift */,
+				3024EED02AFAC5FE00C4D8B6 /* NewsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -389,6 +491,7 @@
 			children = (
 				30E023AA2ADC406200D6770E /* HomeView.swift */,
 				30E023B92ADDAF3300D6770E /* StockPage.swift */,
+				3024EEC32AF8874D00C4D8B6 /* BuySellView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -524,9 +627,10 @@
 			files = (
 				305BBC922ADC10DD00558312 /* LaunchScreen.storyboard in Resources */,
 				305BBC8F2ADC10DD00558312 /* Assets.xcassets in Resources */,
-				305BBCD22ADC1C5800558312 /* GoogleService-Info.plist in Resources */,
 				305BBCCD2ADC174400558312 /* Container.storyboard in Resources */,
 				30E023A92ADC363600D6770E /* HomeStoryboard.storyboard in Resources */,
+				3024EED32AFB299C00C4D8B6 /* GoogleService-Info.plist in Resources */,
+				3024EEA72AF7155B00C4D8B6 /* ProfileStoryboard.storyboard in Resources */,
 				305BBC8A2ADC10DC00558312 /* Main.storyboard in Resources */,
 				305BBCD42ADC1CA700558312 /* AuthStoryboard.storyboard in Resources */,
 			);
@@ -664,29 +768,49 @@
 				305BBC872ADC10DC00558312 /* ViewController.swift in Sources */,
 				305BBC832ADC10DC00558312 /* AppDelegate.swift in Sources */,
 				307D594A2ADE204F0084CDAC /* StockJSONModel.swift in Sources */,
+				3024EEC02AF879C900C4D8B6 /* CustomPicker.swift in Sources */,
 				305BBCBE2ADC163F00558312 /* Navigation.swift in Sources */,
 				305BBCBB2ADC162100558312 /* Date_Ext.swift in Sources */,
 				305BBCB92ADC160B00558312 /* ColorTheme.swift in Sources */,
 				30E023C82ADDB66B00D6770E /* ResizableTextField.swift in Sources */,
 				30E023C42ADDB5A000D6770E /* CommentView.swift in Sources */,
+				300BC06B2AFC0B370066580A /* Analytics.swift in Sources */,
+				3024EEB72AF823F800C4D8B6 /* ManageAccountsView.swift in Sources */,
 				30E023BE2ADDB08A00D6770E /* StockPageViewModel.swift in Sources */,
 				305BBC8D2ADC10DC00558312 /* PaperTrader.xcdatamodeld in Sources */,
 				30E023C02ADDB0B500D6770E /* StockManager.swift in Sources */,
 				305BBCDA2ADC1D6700558312 /* SignInViewController.swift in Sources */,
+				3024EEC92AF9D6C600C4D8B6 /* PortfolioChartView.swift in Sources */,
 				30E023B82ADDADC600D6770E /* StockViewController.swift in Sources */,
+				3024EEB32AF71F3900C4D8B6 /* Error.swift in Sources */,
+				3024EECF2AFAC28600C4D8B6 /* ProfileImageView.swift in Sources */,
 				307D59482ADE201A0084CDAC /* StockChartViewModel.swift in Sources */,
 				305BBCD82ADC1D5300558312 /* SignInView.swift in Sources */,
 				305BBC852ADC10DC00558312 /* SceneDelegate.swift in Sources */,
+				3024EEC62AF8896700C4D8B6 /* Numpad.swift in Sources */,
+				3024EEAF2AF71ABE00C4D8B6 /* SettingsView.swift in Sources */,
+				3024EEC22AF886F400C4D8B6 /* BuySellViewController.swift in Sources */,
 				305BBCC22ADC165500558312 /* UserManager.swift in Sources */,
+				3024EECB2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift in Sources */,
+				3024EEB92AF8247700C4D8B6 /* ManageAccountsViewController.swift in Sources */,
+				3024EEC42AF8874D00C4D8B6 /* BuySellView.swift in Sources */,
 				305BBCC02ADC164700558312 /* Auth.swift in Sources */,
+				3024EEB12AF71B9200C4D8B6 /* CustomFonts.swift in Sources */,
+				3024EEAB2AF7157500C4D8B6 /* SettingsViewController.swift in Sources */,
+				3024EECD2AFAA31700C4D8B6 /* RemoteConfigListener.swift in Sources */,
+				3024EEBE2AF82A2100C4D8B6 /* PaperAccountListItem.swift in Sources */,
 				30E023AB2ADC406200D6770E /* HomeView.swift in Sources */,
+				3024EED12AFAC5FE00C4D8B6 /* NewsView.swift in Sources */,
+				3024EEA92AF7156900C4D8B6 /* ProfileViewController.swift in Sources */,
 				30E023AD2ADC421000D6770E /* JSON.swift in Sources */,
+				3024EEBB2AF8278B00C4D8B6 /* PaperAccount.swift in Sources */,
 				30E023AF2ADC49C100D6770E /* DimView.swift in Sources */,
 				30E023BC2ADDB00200D6770E /* Comment.swift in Sources */,
 				30E023B62ADDAC7C00D6770E /* StockListItem.swift in Sources */,
 				30E023BA2ADDAF3300D6770E /* StockPage.swift in Sources */,
 				305BBCD02ADC17F500558312 /* HomeViewController.swift in Sources */,
 				307D594F2ADE20870084CDAC /* StockTradeView.swift in Sources */,
+				3024EEA52AF7154F00C4D8B6 /* ProfileView.swift in Sources */,
 				305BBCC52ADC16BA00558312 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,12 +993,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = U8Q5FL7WS4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaperTrader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Paper Trader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -998,12 +1123,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = U8Q5FL7WS4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaperTrader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Paper Trader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

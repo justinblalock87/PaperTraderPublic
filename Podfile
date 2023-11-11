@@ -12,8 +12,9 @@ pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'Firebase/Crashlytics'
 pod 'GoogleSignIn'
-pod 'Kingfisher'
+pod 'Kingfisher', '~> 7.6.2'
 pod 'Firebase/Storage'
+pod 'FirebaseRemoteConfig'
 
   target 'PaperTraderTests' do
     inherit! :search_paths

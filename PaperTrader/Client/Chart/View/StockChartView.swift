@@ -12,11 +12,19 @@ struct StockChartView: View {
         viewModel.stockData.map { $0.low }.min() ?? 0
     }
 
+    private var highestDate: Date? {
+        viewModel.stockData.compactMap { $0.date.getDate() }.max()
+    }
+
+    private var lowestDate: Date? {
+        viewModel.stockData.compactMap { $0.date.getDate() }.min()
+    }
+
     private var gradient: LinearGradient {
         let isPriceUp = viewModel.stockData.last?.close ?? 0 > viewModel.stockData.first?.close ?? 0
         return LinearGradient(gradient: Gradient(colors: [isPriceUp ? .green : .red, .clear]),
-                              startPoint: .bottom,
-                              endPoint: .top)
+                              startPoint: .top,
+                              endPoint: .bottom)
     }
 
     private var strokeColor: Color {
@@ -36,37 +44,47 @@ struct StockChartView: View {
                     self.strokePath(in: geometry.size)
                         .stroke(self.strokeColor, lineWidth: 2)
 
-                    // Draggable line masked by the chart fill
-                    Rectangle()
-                        .fill(
-                            LinearGradient(
-                                gradient: Gradient(colors: [self.strokeColor.opacity(0.5), self.strokeColor]),
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )
-                        )
-                        .frame(width: 2)
-                        .alignmentGuide(.bottom) { d in d[.bottom] }
-                        .position(x: viewModel.dragOffset, y: geometry.size.height / 2)
-                        .mask(self.fillPath(in: geometry.size)) // Masking by the chart fill
-                        .overlay(
-                            Rectangle()
-                                .stroke(self.strokeColor, lineWidth: 1)
-                                .blur(radius: 4) // This will give a glow effect
-                                .offset(x: 0, y: 2) // Offset a bit to make the glow more pronounced at the bottom
-                                .mask(self.fillPath(in: geometry.size))
-                        )
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    let potentialOffset = viewModel.dragOffset + value.translation.width
-                                    viewModel.dragOffset = min(max(potentialOffset, 1), geometry.size.width - 1) // Constrain within chart width
-                                    let index = Int((viewModel.dragOffset / geometry.size.width) * CGFloat(viewModel.stockData.count - 1))
-                                    viewModel.currentPrice = viewModel.stockData[index].close
-                                }
-                        )
+//                    // Draggable line masked by the chart fill
+//                    Rectangle()
+//                        .fill(
+//                            LinearGradient(
+//                                gradient: Gradient(colors: [self.strokeColor.opacity(0.5), self.strokeColor]),
+//                                startPoint: .top,
+//                                endPoint: .bottom
+//                            )
+//                        )
+//                        .frame(width: 2)
+//                        .alignmentGuide(.bottom) { d in d[.bottom] }
+//                        .position(x: viewModel.dragOffset, y: geometry.size.height / 2)
+//                        .mask(self.fillPath(in: geometry.size)) // Masking by the chart fill
+//                        .overlay(
+//                            Rectangle()
+//                                .stroke(self.strokeColor, lineWidth: 1)
+//                                .blur(radius: 4) // This will give a glow effect
+//                                .offset(x: 0, y: 2) // Offset a bit to make the glow more pronounced at the bottom
+//                                .mask(self.fillPath(in: geometry.size))
+//                        )
+//                        .gesture(
+//                            DragGesture()
+//                                .onChanged { value in
+//                                    let potentialOffset = viewModel.dragOffset + value.translation.width
+//                                    viewModel.dragOffset = min(max(potentialOffset, 1), geometry.size.width - 1) // Constrain within chart width
+//                                    let index = Int((viewModel.dragOffset / geometry.size.width) * CGFloat(viewModel.stockData.count - 1))
+//                                    viewModel.currentPrice = viewModel.stockData[index].close
+//                                }
+//                        )
                 }
             }
+            HStack {
+                Text(lowestDate?.monthDayYear() ?? "")
+                    .font(.caption)
+                    .foregroundColor(ColorTheme.darkGray)
+                Spacer()
+                Text(highestDate?.monthDayYear() ?? "")
+                    .font(.caption)
+                    .foregroundColor(ColorTheme.darkGray)
+            }
+            .padding(.top, 15)
         }
     }
 

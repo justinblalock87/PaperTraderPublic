@@ -14,12 +14,17 @@ class StockChartViewModel: ObservableObject {
     @Published var stockData: [StockDayData] = []
     @Published var currentPrice: Double = 0
     @Published var dragOffset: CGFloat = 0
-
+    @Published var currentTimeframe = "Y"
+    
     init(stockSymbol: String) {
         self.stockSymbol = stockSymbol
+        reload()
+    }
+    
+    func reload() {
         Task.init {
             do {
-                let data = try await fetchStockHistory(stockSymbol: stockSymbol)
+                let data = try await StockManager.fetchStockHistory(stockSymbol: self.stockSymbol, timeframe: currentTimeframe)
                 DispatchQueue.main.async {
                     self.stockData = data
                     self.currentPrice = data.last?.close ?? 0
@@ -29,30 +34,6 @@ class StockChartViewModel: ObservableObject {
             }
         }
     }
-
-    func fetchStockHistory(stockSymbol: String) async throws -> [StockDayData] {
-        guard let uid = AuthManager.uid() else {
-            print("user not logged in")
-            return []
-        }
-        
-        var components = URLComponents(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/stock/history")!
-        let parameters = ["userId": uid, "accountName": "Paper", "stockSymbol": stockSymbol]
-        components.queryItems = parameters.map { (key, value) in
-            URLQueryItem(name: key, value: value)
-        }
-        
-        let request = HTTPRequest(method: .get, url: components.url!)
-        let (responseBody, response) = try await URLSession.shared.data(for: request)
-        guard response.status == .ok else {
-           // Handle error
-           print("response error", response)
-           return []
-        }
-        
-        return try JSONDecoder().decode(StockHistoryResponse.self, from: responseBody).bars
-    }
-
 }
 
 
@@ -61,13 +42,13 @@ struct StockDayData: Codable {
     let high: Double
     let low: Double
     let open: Double
-//    let date: Date
+    let date: String
 
     enum CodingKeys: String, CodingKey {
         case close = "ClosePrice"
         case high = "HighPrice"
         case low = "LowPrice"
         case open = "OpenPrice"
-//        case date = "Timestamp"
+        case date = "Timestamp"
     }
 }

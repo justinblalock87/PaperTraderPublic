@@ -26,7 +26,7 @@ struct ResizableTextField: UIViewRepresentable {
         view.isScrollEnabled = true
         view.text = self.placeholder
         view.font = .systemFont(ofSize: 18)
-        view.textColor = UIColor.lightGray
+        view.textColor = UIColor.white
         view.backgroundColor = .clear
         view.delegate = context.coordinator
         return view
@@ -52,14 +52,14 @@ struct ResizableTextField: UIViewRepresentable {
         func textViewDidBeginEditing(_ textView: UITextView) {
             if self.parent.text.isEmpty {
                 textView.text = ""
-                textView.textColor = .black
+                textView.textColor = .white
             }
         }
 
         func textViewDidEndEditing(_ textView: UITextView) {
             if textView.text.isEmpty {
                 textView.text = self.parent.placeholder
-                textView.textColor = UIColor.lightGray
+                textView.textColor = UIColor.white
             }
         }
 

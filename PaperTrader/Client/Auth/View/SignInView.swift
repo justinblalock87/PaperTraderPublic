@@ -14,16 +14,16 @@ import FirebaseAuth
 
 struct SignInView: View {
     
-    @State var email: String = "test6@test.com"
-    @State var password: String = "Pass123"
+    @State var email: String = ""
+    @State var password: String = ""
     @State var failedSignIn: Bool = false
     
     var signInCallback: (() -> Void)?
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .top, endPoint: .bottom)
-                            .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [Color.black, ColorTheme.darkGray]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Paper Trader")
                     .font(.system(size: 50, weight: .medium, design: .rounded))
@@ -33,14 +33,16 @@ struct SignInView: View {
                 VStack(spacing: 20) {
                     TextField("Email", text: $email)
                         .padding()
-                        .background(Color.white.opacity(0.7))
+                        .background(Color.gray.opacity(0.7))
                         .cornerRadius(10)
-                    
-                    TextField("Password", text: $password)
+                        .foregroundColor(.white)
+                        .submitLabel(.done)
+                    SecureField("Password", text: $password)
                         .padding()
-                        .background(Color.white.opacity(0.7))
+                        .background(Color.gray.opacity(0.7))
                         .cornerRadius(10)
-                    
+                        .foregroundColor(.white)
+                        .submitLabel(.done)
                     Button(action: {
                         Task.init {
                             do {
@@ -76,13 +78,13 @@ struct SignInView: View {
                     }
                     
                     if failedSignIn {
-                        Text("SignIn failed, please try again.")
+                        Text("Sign-in failed, please try again.")
                             .foregroundColor(.red)
                     }
                 }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 40)
-                .background(Color.white.opacity(0.5))
+                .background(Color.gray.opacity(0.5))
                 .cornerRadius(20)
             }
             .padding()

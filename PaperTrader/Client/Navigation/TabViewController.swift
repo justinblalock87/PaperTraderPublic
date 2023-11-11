@@ -13,7 +13,8 @@ class TabController: UITabBarController {
         super.viewDidLoad()
         
         self.viewControllers?[0].tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), selectedImage: UIImage(named: "house.fill"))
-
+        self.viewControllers?[1].tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.fill"), selectedImage: UIImage(named: "person.fill"))
+        
         self.tabBar.clipsToBounds = true
         self.selectedIndex = 0
     }
