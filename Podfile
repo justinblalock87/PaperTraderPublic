@@ -15,6 +15,8 @@ pod 'GoogleSignIn'
 pod 'Kingfisher', '~> 7.6.2'
 pod 'Firebase/Storage'
 pod 'FirebaseRemoteConfig'
+pod 'Google-Mobile-Ads-SDK'
+pod 'ExytePopupView'
 
   target 'PaperTraderTests' do
     inherit! :search_paths

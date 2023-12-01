@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rGn-TE-Hna">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,6 +17,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bZ1-bo-VNd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Color"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="lua-Fn-l5Y"/>
@@ -24,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-744" y="-28"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Assets-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="PaperTrader" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,25 +39,16 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DID-ik-FrJ">
+                    <navigationItem key="navigationItem" title="Assets" largeTitleDisplayMode="never" id="DID-ik-FrJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="v10-Wa-0mo"/>
                     </navigationItem>
                     <connections>
                         <segue destination="c54-QF-qFo" kind="show" identifier="segueStock" id="XHa-W5-AZ0"/>
-                        <segue destination="avu-Le-vEw" kind="presentation" identifier="segueSettings" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="98h-Sg-jIK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="27" y="-28"/>
-        </scene>
-        <!--ProfileNav-->
-        <scene sceneID="Wwb-sf-ORC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ProfileStoryboard" referencedIdentifier="ProfileNav" id="avu-Le-vEw" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1g4-Nh-v3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="27" y="426"/>
         </scene>
         <!--Stock View Controller-->
         <scene sceneID="fPl-BR-wvX">
@@ -65,9 +61,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IY5-Pb-kwW">
-                        <barButtonItem key="backBarButtonItem" title=" " id="W2W-4X-Bkd"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="W2W-4X-Bkd">
+                            <color key="tintColor" name="Color"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="MXO-CG-ylK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NjA-Pz-Mvp">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="starStock:" destination="c54-QF-qFo" eventType="touchUpInside" id="bA3-dy-FSP"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="starButton" destination="NjA-Pz-Mvp" id="IrZ-9s-K0e"/>
                         <segue destination="ZYO-rb-vjU" kind="presentation" identifier="segueBuySell" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="ubX-B5-EIM"/>
                     </connections>
                 </viewController>
@@ -92,6 +102,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

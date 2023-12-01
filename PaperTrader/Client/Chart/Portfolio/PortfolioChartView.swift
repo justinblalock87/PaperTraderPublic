@@ -41,16 +41,31 @@ struct PortfolioChartView: View {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("Your Portfolio")
-                        .fontWeight(.semibold)
-                        .font(.title3)
-                        .foregroundStyle(.white)
-                    HStack(spacing: 0) {
+                        .font(.system(size: 28, weight: .semibold, design: .default))
+                        .padding(.bottom, 20)
+                    
+                    Text("Profit/Loss")
+                        .foregroundStyle(ColorTheme.goodGray)
+                        .font(.system(size: 16, weight: .semibold, design: .default))
+                    
+                    HStack(alignment: .center, spacing: 2) {
                         Text("$\(String(describing: viewModel.profit_loss)) ")
+                            .font(.system(size: 22, weight: .semibold, design: .default))
                             .foregroundStyle(.white)
                         Text("\(String(describing: viewModel.percent_change))%")
+                            .font(.system(size: 22, weight: .semibold, design: .default))
                             .foregroundStyle(viewModel.percent_change >= 0 ? .green : .red)
+                        Spacer()
+                        Text("1D")
+                            .foregroundStyle(.black)
+                            .padding(.vertical, 7)
+                            .padding(.horizontal, 20)
+                            .background(ColorTheme.darkGray)
+                            .clipShape(Capsule())
                     }
                 }
+                .padding(.bottom, 20)
+                
                 VStack {
                     GeometryReader { geometry in
                         ZStack {
@@ -63,23 +78,18 @@ struct PortfolioChartView: View {
                                 .stroke(self.strokeColor, lineWidth: 2)
                         }
                     }
-                    HStack {
-                        Text(lowestTimestamp.getDate().monthDay() ?? "")
-                            .font(.caption)
-                            .foregroundColor(.white)
-                        Spacer()
-                        Text(highestTimestamp.getDate().monthDay() ?? "")
-                            .font(.caption)
-                            .foregroundColor(.white)
-                    }
+//                    HStack {
+//                        Text(lowestTimestamp.getDate().monthDay() ?? "")
+//                            .font(.caption)
+//                            .foregroundColor(.white)
+//                        Spacer()
+//                        Text(highestTimestamp.getDate().monthDay() ?? "")
+//                            .font(.caption)
+//                            .foregroundColor(.white)
+//                    }
                 }
             }
-            .padding()
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(ColorTheme.lightGray, lineWidth: 2)
-        )
     }
 
     func fillPath(in size: CGSize) -> Path {

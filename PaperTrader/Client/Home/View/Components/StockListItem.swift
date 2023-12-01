@@ -18,6 +18,7 @@ struct StockListItem: View {
                     Text(stock.name)
                         .font(.headline)
                         .foregroundColor(Color.white)
+                        .multilineTextAlignment(.leading)
                     Text(stock.symbol)
                         .font(.subheadline)
                         .foregroundColor(Color.white)
@@ -34,7 +35,7 @@ struct StockListItem: View {
                     if let percentageChange = stock.percentageChange {
                         Text("\(percentageChange, specifier: "%.2f")%")
                             .font(.subheadline)
-                            .foregroundColor(percentageChange > 0 ? .green : .red)
+                            .foregroundColor(percentageChange >= 0 ? .green : .red)
                     }
                 }
             }

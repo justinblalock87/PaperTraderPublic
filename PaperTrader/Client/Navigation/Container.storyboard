@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VGI-GL-4uu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="TWk-HQ-c1D" kind="relationship" relationship="viewControllers" id="7t8-bq-2a4"/>
-                        <segue destination="yap-nJ-eNg" kind="relationship" relationship="viewControllers" id="KCB-21-2Dn"/>
+                        <segue destination="F3n-V2-qUg" kind="relationship" relationship="viewControllers" id="aB5-3p-BDL"/>
+                        <segue destination="yap-nJ-eNg" kind="relationship" relationship="viewControllers" id="wJA-Sd-qxp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naD-5O-cKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,7 +44,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqS-4v-miB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="42"/>
+            <point key="canvasLocation" x="1152" y="103"/>
+        </scene>
+        <!--TrendingVC-->
+        <scene sceneID="SZb-Lf-GZB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrendingStoryboard" referencedIdentifier="TrendingVC" id="F3n-V2-qUg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iDy-l9-EAi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSt-ga-6dc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-27"/>
         </scene>
     </scenes>
 </document>

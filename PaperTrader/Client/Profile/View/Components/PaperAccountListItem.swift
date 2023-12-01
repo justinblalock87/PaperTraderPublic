@@ -14,8 +14,16 @@ struct PaperAccountListItem: View {
     
     var body: some View {
         VStack {
-            Text(paperAccount.name)
-                .foregroundStyle(paperAccount.name == activeAccountName ? .green : .black)
+            HStack {
+                Text(paperAccount.name)
+                    .foregroundStyle(paperAccount.name == activeAccountName ? .green : .black)
+                    .font(.system(size: 18, weight: .medium))
+                if paperAccount.name == activeAccountName {
+                    Text("• Active")
+                        .font(.system(size: 18, weight: .medium))
+                }
+                Spacer()
+            }
         }
     }
 }

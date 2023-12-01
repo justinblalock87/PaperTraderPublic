@@ -11,15 +11,15 @@ import UIKit
 class NavigationManager {
 
     static func toHomeScreen(window: UIWindow?) {
-        NavigationManager.setWindowRootViewController(storyboardName: "HomeStoryboard",
-                                                      viewControllerIdentifier: "HomeNavigationController",
+        NavigationManager.setWindowRootViewController(storyboardName: "Container",
+                                                      viewControllerIdentifier: "MainTabController",
                                                       window: window)
     }
     
     static func toHomeScreen(viewController: UIViewController) {
         NavigationManager.presentViewController(fromController: viewController,
-                                                storyboardName: "HomeStoryboard",
-                                                viewControllerIdentifier: "HomeNavigationController")
+                                                storyboardName: "Container",
+                                                viewControllerIdentifier: "MainTabController")
     }
     
     static func showSignIn(window: UIWindow?) {

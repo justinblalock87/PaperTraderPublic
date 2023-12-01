@@ -14,7 +14,7 @@ class StockChartViewModel: ObservableObject {
     @Published var stockData: [StockDayData] = []
     @Published var currentPrice: Double = 0
     @Published var dragOffset: CGFloat = 0
-    @Published var currentTimeframe = "Y"
+    @Published var currentTimeframe = "1Y"
     
     init(stockSymbol: String) {
         self.stockSymbol = stockSymbol

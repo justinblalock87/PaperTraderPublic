@@ -28,7 +28,7 @@ class AuthManager {
             print("user not logged in")
             return
         }
-        var request = HTTPRequest(method: .post, url: URL(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/setup/initialsetup")!)
+        var request = HTTPRequest(method: .post, url: URL(string: serverURL + "setup/initialsetup")!)
         let requestBody: [String: Any] = [
             "userId": uid,
             "username": email.substring(to: email.firstIndex(of: "@")!),
@@ -62,7 +62,7 @@ class AuthManager {
                 return
             }
         }
-        var request = HTTPRequest(method: .post, url: URL(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/accounts/create")!)
+        var request = HTTPRequest(method: .post, url: URL(string: serverURL + "accounts/create")!)
         let requestBody: [String: Any] = [
             "userId": uid,
             "accountName": accountName,
@@ -85,7 +85,7 @@ class AuthManager {
             print("user not logged in")
             return []
         }
-        var components = URLComponents(string: "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/accounts/get")!
+        var components = URLComponents(string: serverURL + "accounts/get")!
         let parameters = ["userId": uid]
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)

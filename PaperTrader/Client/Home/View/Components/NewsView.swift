@@ -8,17 +8,63 @@
 import SwiftUI
 
 struct NewsView: View {
+    
+    @ObservedObject var vm: StockPageViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("In the News")
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding(.bottom, 5)
-            Text("Apple is blaming a software bug and other issues tied to popular apps such as Instagram and Uber for causing its recently released iPhone 15 models to heat up and spark complaints about becoming too hot to handle. The Cupertino, California, company said Saturday that it is working on an update to the iOS17 system that powers the iPhone 15 lineup to prevent the devices from becoming uncomfortably hot and is working with apps that are running in ways “causing them to overload the system.” Instagram, owned by Meta Platforms, modified its social media app earlier this week to prevent it from heating up the device on the latest iPhone operating system. Uber and other apps such as the video game Asphalt 9 are still in the process of rolling out their updates, Apple said. It didn’t specify a timeline for when its own software fix would be issued but said no safety issues should prevent iPhone 15 owners from using their devices while awaiting the update.")
+            HStack(alignment: .center) {
+                Text("News")
+                    .font(.system(size: 30, weight: .bold))
+                InfoView(infoText: "Traders often find it helpful to use the latest news in order to make decisions about buying and selling stocks. Signs of a company flourishing could be a positive indicator for increasing stock value. On the other hand, a comapany faltering could spell danger.")
+            }
+            .padding(.bottom, 10)
+            VStack {
+                ForEach(vm.news) { story in
+                    NewsItem(news: story)
+                        .padding(.vertical, 10)
+                }
+            }
+        }
+    }
+}
+
+struct NewsItem: View {
+    
+    @Environment(\.openURL) private var openURL
+    
+    let news: News
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Button(action: {
+                if let url = URL(string: news.url) {
+                    openURL(url)
+                }
+            }, label: {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text(news.source)
+                            .font(.system(size: 20, weight: .semibold))
+                            .multilineTextAlignment(.leading)
+                        Text("• " + news.createdAt)
+                            .font(.system(size: 20, weight: .medium))
+                    }
+                    HStack {
+                        Text(news.headline)
+                            .foregroundStyle(Color(red: 150/255, green: 150/255, blue: 150/255))
+                            .font(.system(size: 18, weight: .medium))
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(3)
+                        Spacer()
+                    }
+                }
+            })
+            .buttonStyle(.plain)
         }
     }
 }
 
 #Preview {
-    NewsView()
+    NewsView(vm: StockPageViewModel(stock: Stock(name: "Apple Inc.", symbol: "AAPL", price: 176.09, percentageChange: -2.68)))
 }

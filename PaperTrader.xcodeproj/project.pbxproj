@@ -57,6 +57,20 @@
 		307D594A2ADE204F0084CDAC /* StockJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D59492ADE204F0084CDAC /* StockJSONModel.swift */; };
 		307D594D2ADE20700084CDAC /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D594C2ADE20700084CDAC /* StockChartView.swift */; };
 		307D594F2ADE20870084CDAC /* StockTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D594E2ADE20870084CDAC /* StockTradeView.swift */; };
+		3097C1AF2B0DB1090065D9E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097C1AE2B0DB1090065D9E9 /* News.swift */; };
+		3097C1B22B0FB4870065D9E9 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097C1B12B0FB4870065D9E9 /* Ads.swift */; };
+		3097C1B52B1125A50065D9E9 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097C1B42B1125A50065D9E9 /* InfoView.swift */; };
+		30D79D792B0BA08C0060C876 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D782B0BA08C0060C876 /* WatchList.swift */; };
+		30D79D7B2B0BC2BC0060C876 /* TopMovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D7A2B0BC2BB0060C876 /* TopMovers.swift */; };
+		30D79D802B0CF8F20060C876 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D7F2B0CF8F20060C876 /* PortfolioView.swift */; };
+		30D79D822B0D016D0060C876 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D812B0D016D0060C876 /* Order.swift */; };
+		30D79D842B0D1C850060C876 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D832B0D1C850060C876 /* Position.swift */; };
+		30D79D892B0D26720060C876 /* TrendingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D79D882B0D26720060C876 /* TrendingStoryboard.storyboard */; };
+		30D79D8B2B0D26FE0060C876 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D8A2B0D26FE0060C876 /* TrendingViewController.swift */; };
+		30D79D8D2B0D27230060C876 /* TrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D8C2B0D27230060C876 /* TrendingView.swift */; };
+		30D79D8F2B0D27630060C876 /* TrendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D8E2B0D27630060C876 /* TrendingViewModel.swift */; };
+		30D79D922B0D27B70060C876 /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D912B0D27B70060C876 /* SocialManager.swift */; };
+		30D79D942B0D4B500060C876 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D79D932B0D4B500060C876 /* AccountDetails.swift */; };
 		30E023A42ADC328A00D6770E /* HTTPTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 30E023A32ADC328A00D6770E /* HTTPTypes */; };
 		30E023A62ADC328A00D6770E /* HTTPTypesFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 30E023A52ADC328A00D6770E /* HTTPTypesFoundation */; };
 		30E023A92ADC363600D6770E /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E023A82ADC363600D6770E /* HomeStoryboard.storyboard */; };
@@ -74,6 +88,13 @@
 		30E023C42ADDB5A000D6770E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023C32ADDB5A000D6770E /* CommentView.swift */; };
 		30E023C82ADDB66B00D6770E /* ResizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E023C72ADDB66B00D6770E /* ResizableTextField.swift */; };
 		B9809435CC07154D328C0478 /* Pods_PaperTrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A4AA58309B1E9BA3873019 /* Pods_PaperTrader.framework */; };
+		E4306C542AFC71CC00A368EC /* TrendTradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4306C532AFC71CC00A368EC /* TrendTradingView.swift */; };
+		E46088C22B11602B0087DB8E /* DiversificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088C12B11602B0087DB8E /* DiversificationView.swift */; };
+		E46088C42B116E540087DB8E /* StopLossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088C32B116E540087DB8E /* StopLossView.swift */; };
+		E46088C62B1176130087DB8E /* FOMOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088C52B1176130087DB8E /* FOMOView.swift */; };
+		E46088C82B117B750087DB8E /* QuantitativeTradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088C72B117B750087DB8E /* QuantitativeTradingView.swift */; };
+		E46088CA2B11B3030087DB8E /* LongTermInvestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088C92B11B3030087DB8E /* LongTermInvestingView.swift */; };
+		E46088CC2B11B8E70087DB8E /* EventDrivenTradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46088CB2B11B8E70087DB8E /* EventDrivenTradingView.swift */; };
 		EC21A4367C0C3296FDE552B7 /* Pods_PaperTraderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57E7F69E34417F3E678DBB8 /* Pods_PaperTraderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +172,20 @@
 		307D59492ADE204F0084CDAC /* StockJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockJSONModel.swift; sourceTree = "<group>"; };
 		307D594C2ADE20700084CDAC /* StockChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartView.swift; sourceTree = "<group>"; };
 		307D594E2ADE20870084CDAC /* StockTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradeView.swift; sourceTree = "<group>"; };
+		3097C1AE2B0DB1090065D9E9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		3097C1B12B0FB4870065D9E9 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
+		3097C1B42B1125A50065D9E9 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		30D79D782B0BA08C0060C876 /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
+		30D79D7A2B0BC2BB0060C876 /* TopMovers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovers.swift; sourceTree = "<group>"; };
+		30D79D7F2B0CF8F20060C876 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		30D79D812B0D016D0060C876 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		30D79D832B0D1C850060C876 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		30D79D882B0D26720060C876 /* TrendingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendingStoryboard.storyboard; sourceTree = "<group>"; };
+		30D79D8A2B0D26FE0060C876 /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		30D79D8C2B0D27230060C876 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
+		30D79D8E2B0D27630060C876 /* TrendingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewModel.swift; sourceTree = "<group>"; };
+		30D79D912B0D27B70060C876 /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		30D79D932B0D4B500060C876 /* AccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetails.swift; sourceTree = "<group>"; };
 		30E023A82ADC363600D6770E /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		30E023AA2ADC406200D6770E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		30E023AC2ADC421000D6770E /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -170,6 +205,13 @@
 		44A4AA58309B1E9BA3873019 /* Pods_PaperTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E997F67D093E075175D4A8 /* Pods-PaperTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader.release.xcconfig"; path = "Target Support Files/Pods-PaperTrader/Pods-PaperTrader.release.xcconfig"; sourceTree = "<group>"; };
 		A57E7F69E34417F3E678DBB8 /* Pods_PaperTraderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperTraderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4306C532AFC71CC00A368EC /* TrendTradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTradingView.swift; sourceTree = "<group>"; };
+		E46088C12B11602B0087DB8E /* DiversificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiversificationView.swift; sourceTree = "<group>"; };
+		E46088C32B116E540087DB8E /* StopLossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLossView.swift; sourceTree = "<group>"; };
+		E46088C52B1176130087DB8E /* FOMOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOMOView.swift; sourceTree = "<group>"; };
+		E46088C72B117B750087DB8E /* QuantitativeTradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitativeTradingView.swift; sourceTree = "<group>"; };
+		E46088C92B11B3030087DB8E /* LongTermInvestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermInvestingView.swift; sourceTree = "<group>"; };
+		E46088CB2B11B8E70087DB8E /* EventDrivenTradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDrivenTradingView.swift; sourceTree = "<group>"; };
 		E6A6F1820E3936C4F35B9EDE /* Pods-PaperTrader-PaperTraderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperTrader-PaperTraderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PaperTrader-PaperTraderUITests/Pods-PaperTrader-PaperTraderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +281,7 @@
 				3024EEA42AF7154F00C4D8B6 /* ProfileView.swift */,
 				3024EEAE2AF71ABD00C4D8B6 /* SettingsView.swift */,
 				3024EEB62AF823F800C4D8B6 /* ManageAccountsView.swift */,
+				30D79D7F2B0CF8F20060C876 /* PortfolioView.swift */,
 				3024EEA62AF7155B00C4D8B6 /* ProfileStoryboard.storyboard */,
 			);
 			path = View;
@@ -343,6 +386,7 @@
 				305BBCC12ADC165500558312 /* UserManager.swift */,
 				30E023BF2ADDB0B500D6770E /* StockManager.swift */,
 				3024EECC2AFAA31700C4D8B6 /* RemoteConfigListener.swift */,
+				30D79D912B0D27B70060C876 /* SocialManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -354,6 +398,10 @@
 				30E023B02ADDA9D500D6770E /* Stock.swift */,
 				30E023BB2ADDB00200D6770E /* Comment.swift */,
 				3024EEBA2AF8278B00C4D8B6 /* PaperAccount.swift */,
+				30D79D812B0D016D0060C876 /* Order.swift */,
+				30D79D832B0D1C850060C876 /* Position.swift */,
+				30D79D932B0D4B500060C876 /* AccountDetails.swift */,
+				3097C1AE2B0DB1090065D9E9 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +409,9 @@
 		305BBCC62ADC16CB00558312 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				3097C1B32B1125950065D9E9 /* Info */,
+				3097C1B02B0FB4750065D9E9 /* Ads */,
+				30D79D852B0D264F0060C876 /* Trending */,
 				3024EEA32AF714E500C4D8B6 /* Profile */,
 				307D59462ADE200E0084CDAC /* Chart */,
 				305BBCC92ADC16F500558312 /* Home */,
@@ -453,6 +504,57 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3097C1B02B0FB4750065D9E9 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				3097C1B12B0FB4870065D9E9 /* Ads.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		3097C1B32B1125950065D9E9 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3097C1B42B1125A50065D9E9 /* InfoView.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		30D79D852B0D264F0060C876 /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				30D79D902B0D27680060C876 /* ViewModel */,
+				30D79D862B0D26590060C876 /* View */,
+				30D79D872B0D26600060C876 /* Controller */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		30D79D862B0D26590060C876 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30D79D882B0D26720060C876 /* TrendingStoryboard.storyboard */,
+				30D79D8C2B0D27230060C876 /* TrendingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30D79D872B0D26600060C876 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30D79D8A2B0D26FE0060C876 /* TrendingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30D79D902B0D27680060C876 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30D79D8E2B0D27630060C876 /* TrendingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		30E023A72ADC362500D6770E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +577,7 @@
 		30E023C52ADDB64700D6770E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E46088C12B11602B0087DB8E /* DiversificationView.swift */,
 				30E023C32ADDB5A000D6770E /* CommentView.swift */,
 				30E023B52ADDAC7C00D6770E /* StockListItem.swift */,
 				30E023C72ADDB66B00D6770E /* ResizableTextField.swift */,
@@ -482,6 +585,14 @@
 				3024EEC52AF8896700C4D8B6 /* Numpad.swift */,
 				3024EECE2AFAC28600C4D8B6 /* ProfileImageView.swift */,
 				3024EED02AFAC5FE00C4D8B6 /* NewsView.swift */,
+				30D79D782B0BA08C0060C876 /* WatchList.swift */,
+				30D79D7A2B0BC2BB0060C876 /* TopMovers.swift */,
+				E4306C532AFC71CC00A368EC /* TrendTradingView.swift */,
+				E46088C32B116E540087DB8E /* StopLossView.swift */,
+				E46088C52B1176130087DB8E /* FOMOView.swift */,
+				E46088C72B117B750087DB8E /* QuantitativeTradingView.swift */,
+				E46088C92B11B3030087DB8E /* LongTermInvestingView.swift */,
+				E46088CB2B11B8E70087DB8E /* EventDrivenTradingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -625,6 +736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D79D892B0D26720060C876 /* TrendingStoryboard.storyboard in Resources */,
 				305BBC922ADC10DD00558312 /* LaunchScreen.storyboard in Resources */,
 				305BBC8F2ADC10DD00558312 /* Assets.xcassets in Resources */,
 				305BBCCD2ADC174400558312 /* Container.storyboard in Resources */,
@@ -770,47 +882,67 @@
 				307D594A2ADE204F0084CDAC /* StockJSONModel.swift in Sources */,
 				3024EEC02AF879C900C4D8B6 /* CustomPicker.swift in Sources */,
 				305BBCBE2ADC163F00558312 /* Navigation.swift in Sources */,
+				E46088C22B11602B0087DB8E /* DiversificationView.swift in Sources */,
 				305BBCBB2ADC162100558312 /* Date_Ext.swift in Sources */,
 				305BBCB92ADC160B00558312 /* ColorTheme.swift in Sources */,
+				30D79D942B0D4B500060C876 /* AccountDetails.swift in Sources */,
+				E46088C62B1176130087DB8E /* FOMOView.swift in Sources */,
 				30E023C82ADDB66B00D6770E /* ResizableTextField.swift in Sources */,
 				30E023C42ADDB5A000D6770E /* CommentView.swift in Sources */,
 				300BC06B2AFC0B370066580A /* Analytics.swift in Sources */,
 				3024EEB72AF823F800C4D8B6 /* ManageAccountsView.swift in Sources */,
 				30E023BE2ADDB08A00D6770E /* StockPageViewModel.swift in Sources */,
+				3097C1B52B1125A50065D9E9 /* InfoView.swift in Sources */,
+				30D79D842B0D1C850060C876 /* Position.swift in Sources */,
 				305BBC8D2ADC10DC00558312 /* PaperTrader.xcdatamodeld in Sources */,
 				30E023C02ADDB0B500D6770E /* StockManager.swift in Sources */,
+				30D79D8D2B0D27230060C876 /* TrendingView.swift in Sources */,
 				305BBCDA2ADC1D6700558312 /* SignInViewController.swift in Sources */,
 				3024EEC92AF9D6C600C4D8B6 /* PortfolioChartView.swift in Sources */,
 				30E023B82ADDADC600D6770E /* StockViewController.swift in Sources */,
 				3024EEB32AF71F3900C4D8B6 /* Error.swift in Sources */,
+				30D79D802B0CF8F20060C876 /* PortfolioView.swift in Sources */,
 				3024EECF2AFAC28600C4D8B6 /* ProfileImageView.swift in Sources */,
+				E46088C42B116E540087DB8E /* StopLossView.swift in Sources */,
 				307D59482ADE201A0084CDAC /* StockChartViewModel.swift in Sources */,
 				305BBCD82ADC1D5300558312 /* SignInView.swift in Sources */,
 				305BBC852ADC10DC00558312 /* SceneDelegate.swift in Sources */,
 				3024EEC62AF8896700C4D8B6 /* Numpad.swift in Sources */,
 				3024EEAF2AF71ABE00C4D8B6 /* SettingsView.swift in Sources */,
+				30D79D822B0D016D0060C876 /* Order.swift in Sources */,
 				3024EEC22AF886F400C4D8B6 /* BuySellViewController.swift in Sources */,
 				305BBCC22ADC165500558312 /* UserManager.swift in Sources */,
 				3024EECB2AF9D6DB00C4D8B6 /* PortfolioViewModel.swift in Sources */,
 				3024EEB92AF8247700C4D8B6 /* ManageAccountsViewController.swift in Sources */,
+				30D79D8F2B0D27630060C876 /* TrendingViewModel.swift in Sources */,
+				3097C1AF2B0DB1090065D9E9 /* News.swift in Sources */,
 				3024EEC42AF8874D00C4D8B6 /* BuySellView.swift in Sources */,
+				30D79D8B2B0D26FE0060C876 /* TrendingViewController.swift in Sources */,
 				305BBCC02ADC164700558312 /* Auth.swift in Sources */,
 				3024EEB12AF71B9200C4D8B6 /* CustomFonts.swift in Sources */,
 				3024EEAB2AF7157500C4D8B6 /* SettingsViewController.swift in Sources */,
 				3024EECD2AFAA31700C4D8B6 /* RemoteConfigListener.swift in Sources */,
+				E46088CC2B11B8E70087DB8E /* EventDrivenTradingView.swift in Sources */,
 				3024EEBE2AF82A2100C4D8B6 /* PaperAccountListItem.swift in Sources */,
 				30E023AB2ADC406200D6770E /* HomeView.swift in Sources */,
 				3024EED12AFAC5FE00C4D8B6 /* NewsView.swift in Sources */,
+				30D79D7B2B0BC2BC0060C876 /* TopMovers.swift in Sources */,
 				3024EEA92AF7156900C4D8B6 /* ProfileViewController.swift in Sources */,
 				30E023AD2ADC421000D6770E /* JSON.swift in Sources */,
 				3024EEBB2AF8278B00C4D8B6 /* PaperAccount.swift in Sources */,
 				30E023AF2ADC49C100D6770E /* DimView.swift in Sources */,
+				E46088CA2B11B3030087DB8E /* LongTermInvestingView.swift in Sources */,
 				30E023BC2ADDB00200D6770E /* Comment.swift in Sources */,
 				30E023B62ADDAC7C00D6770E /* StockListItem.swift in Sources */,
+				30D79D792B0BA08C0060C876 /* WatchList.swift in Sources */,
+				E46088C82B117B750087DB8E /* QuantitativeTradingView.swift in Sources */,
 				30E023BA2ADDAF3300D6770E /* StockPage.swift in Sources */,
 				305BBCD02ADC17F500558312 /* HomeViewController.swift in Sources */,
+				E4306C542AFC71CC00A368EC /* TrendTradingView.swift in Sources */,
 				307D594F2ADE20870084CDAC /* StockTradeView.swift in Sources */,
+				3097C1B22B0FB4870065D9E9 /* Ads.swift in Sources */,
 				3024EEA52AF7154F00C4D8B6 /* ProfileView.swift in Sources */,
+				30D79D922B0D27B70060C876 /* SocialManager.swift in Sources */,
 				305BBCC52ADC16BA00558312 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -993,7 +1125,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = U8Q5FL7WS4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1005,6 +1137,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1123,7 +1256,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = U8Q5FL7WS4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1135,6 +1268,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,10 +9,17 @@ import Foundation
 import SwiftUI
 import UIKit
 
+struct DarkColorTheme {
+    static let darkBackground = Color.init(red: 30/255, green: 30/255, blue: 30/255)
+    static let darkPopup = Color.init(red: 50/255, green: 50/255, blue: 50/255)
+    static let darkGray = Color(white: 0.2)
+    static let lightGray = Color(white: 0.6)
+}
+
 struct ColorTheme {
     
     static let black = Color(red: 20/255, green: 20/255, blue: 20/255, opacity: 1)
-    static let primaryColor = Color(red: 143/255, green: 223/255, blue: 143/255, opacity: 1)
+    static let primaryColor = Color(red: 55/255, green: 115/255, blue: 245/255, opacity: 1)
     static let primaryUIColor = UIColor(red: 143/255, green: 223/255, blue: 143/255, alpha: 1)
     static let primaryColorFade = Color(red: 143/255, green: 223/255, blue: 143/255, opacity: 0.5)
     static let primaryColorFadeBackground = Color(red: 143/255, green: 223/255, blue: 143/255, opacity: 0.2)
@@ -41,4 +48,5 @@ struct ColorTheme {
     static let headerGray = Color(red: 170/255, green: 170/255, blue: 170/255)
     
     static let placeholderGray = Color(red: 211/255, green: 211/255, blue: 213/255, opacity: 1)
+    static let goodGray = Color(red: 137/255, green: 145/255, blue: 158/255)
 }

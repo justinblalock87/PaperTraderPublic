@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ManageAccountsView: View {
     
+    @Environment(\.openURL) private var openURL
+    
     @State var currentUser: User?
     @State var accountName: String = "Paper"
     @State var alpacaKey: String = "PK1Y8KLXJ30IK23SNTUS"
     @State var alpacaSecretKey: String = "dT0Jnh2VvTWRjjoQVcn179QsPOalgruq4FSKVqXv"
+    @State var accounts: [PaperAccount] = []
     
     var dismissCallback: (() -> Void)?
-    @State var accounts: [PaperAccount] = []
     
     var body: some View {
         ScrollView {
@@ -28,6 +30,7 @@ struct ManageAccountsView: View {
             .task(priority: .userInitiated, {
                 currentUser = try? await UserManager.getCurrentUser()
             })
+            .analyticsScreen(name: "Manage Accounts")
         }
     }
 
@@ -45,8 +48,10 @@ struct ManageAccountsView: View {
                     .padding()
                     Spacer()
                 }
-                Text("Paper Accounts")
-                    .font(.system(size: 22, weight: .medium, design: .rounded))
+                VStack {
+                    Text("Paper Accounts")
+                        .font(.system(size: 22, weight: .medium, design: .rounded))
+                }
             }
             .padding(.horizontal, UIScreen.main.bounds.size.width * 0.025)
             Divider()
@@ -56,20 +61,31 @@ struct ManageAccountsView: View {
     
     private var createPaperAccountView: some View {
         VStack(spacing: 20) {
-            Text("Add Alpaca Paper Account")
-                .multilineTextAlignment(.center)
-                .font(.headline)
+            HStack {
+                Text("In order to use Paper Trade, you must add an Alpaca Paper Account")
+                    .multilineTextAlignment(.leading)
+                    .font(.headline)
+                Spacer()
+                Button(action: {
+                    openURL(URL(string: "https://app.alpaca.markets/signup")!)
+                }, label: {
+                    Text("Alpaca")
+                        .foregroundStyle(Color.blue)
+                        .underline()
+                })
+                .buttonStyle(.plain)
+            }
             TextField("Account Name", text: $accountName)
                 .padding()
-                .background(ColorTheme.lightGray)
+                .background(ColorTheme.darkGray)
                 .cornerRadius(10)
             TextField("Alpaca Key", text: $alpacaKey)
                 .padding()
-                .background(ColorTheme.lightGray)
+                .background(ColorTheme.darkGray)
                 .cornerRadius(10)
             TextField("Alpaca Secret Key", text: $alpacaSecretKey)
                 .padding()
-                .background(ColorTheme.lightGray)
+                .background(ColorTheme.darkGray)
                 .cornerRadius(10)
             Button(action: {
                 Task.init {
@@ -91,7 +107,11 @@ struct ManageAccountsView: View {
     }
     
     private var accountsList: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Current Accounts")
+                .font(.system(size: 30, weight: .semibold))
+                .foregroundStyle(Color.white)
+                .padding(.bottom, 20)
             ForEach(accounts) { account in
                 PaperAccountListItem(paperAccount: account, activeAccountName: currentUser?.activePaperAccount ?? "")
                     .onTapGesture {

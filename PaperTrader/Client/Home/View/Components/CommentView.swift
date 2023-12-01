@@ -9,13 +9,16 @@ import SwiftUI
 
 struct CommentView: View {
     
-    var comment: Comment
     @State private var didLike: Bool = false
     @State private var didDislike: Bool = false
+    
+    var comment: Comment
+    let shouldShowSymbol: Bool
 
-    init(comment: Comment) {
+    init(comment: Comment, shouldShowSymbol: Bool = false) {
         self.comment = comment
-
+        self.shouldShowSymbol = shouldShowSymbol
+        
         if let uid = AuthManager.uid() {
             if comment.likers.contains(uid) {
                 self._didLike = State(initialValue: true)
@@ -27,11 +30,15 @@ struct CommentView: View {
         var body: some View {
             VStack(alignment: .leading) {
                 HStack(alignment: .center) {
-                    UserChatProfileView(profileImageUrl: "")
+                    UserChatProfileView(profileImageUrl: comment.authorProfilePictureURL)
                     
                     Text("@\(comment.authorUsername) (\(comment.authorReliability))")
                         .font(.system(size: 14))
                         .multilineTextAlignment(.leading)
+                    if let symbol = comment.stockSymbol, shouldShowSymbol {
+                        Text("• " + symbol)
+                            .font(.system(size: 14))
+                    }
                     Spacer()
                     Text(comment.timestamp.getDate().timeAgoDisplay())
                         .font(.system(size: 14))
@@ -116,8 +123,8 @@ struct CommentView: View {
 
 #Preview {
     VStack {
-        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: []))
-        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: []))
-        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: []))
+        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: [], stockSymbol: nil))
+        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: [], stockSymbol: nil))
+        CommentView(comment: Comment(id: "1", authorID: "1", authorUsername: "justin", timestamp: 100000, content: "This is a test comment", authorReliability: 0, likes: 1, likers: [], dislikers: [], stockSymbol: nil))
     }
 }

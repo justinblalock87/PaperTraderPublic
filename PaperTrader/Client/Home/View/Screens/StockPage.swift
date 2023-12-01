@@ -13,6 +13,7 @@ struct StockPage: View {
     let stock: Stock
     @StateObject var vm: StockPageViewModel
     @StateObject var chartVM: StockChartViewModel
+    @StateObject var infoVM = InfoViewModel()
     @State var comments = [Comment]()
     
     @FocusState var keyboardIsUp: Bool
@@ -52,6 +53,7 @@ struct StockPage: View {
                 }
                 .task {
                     try? await vm.fetchComments()
+                    try? await vm.fetchNews()
                 }
                 .padding(.horizontal, 20)
                 
@@ -78,11 +80,23 @@ struct StockPage: View {
         .analyticsScreen(name: "StockPage", extraParameters: ["stock": stock.symbol])
         .background(DarkColorTheme.darkBackground)
         .foregroundColor(.white)
+        .environmentObject(infoVM)
+        .popup(isPresented: $infoVM.shouldShowInfo) {
+            InfoPopupView(infoText: infoVM.infoText, infoLink: infoVM.infoLink)
+        } customize: {
+            $0
+            .type(.floater())
+            .position(.bottom)
+            .animation(.spring())
+            .closeOnTapOutside(true)
+            .backgroundColor(.black.opacity(0.4))
+            .isOpaque(true)
+        }
         
     }
     
     private var summaryView: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack(spacing: 20) {
                 VStack(alignment: .leading) {
                     Text("Open")
@@ -98,9 +112,11 @@ struct StockPage: View {
                     Text(String(format: "%.2f", chartVM.stockData.last?.low ?? 0))
                 }
                 Spacer()
+                InfoView(infoText: "The opening price is the price of the stock at the first transaction of the day. The closing price is the last price at which at stock is traded in a day. The low is the lowest value of the stock over the day.")
             }
             .padding(.top, 10)
-            NewsView()
+            
+            NewsView(vm: vm)
                 .padding(.vertical, 20)
         }
     }
@@ -114,9 +130,43 @@ struct StockPage: View {
     }
     
     private var learnView: some View {
-        VStack {
-            Text("work in progress")
-        }
+        NavigationView {
+
+                List {
+                    NavigationLink(destination: TrendTradingView()) {
+                        Text("Trend Trading")
+                    }
+//                    .listRowBackground(Color.clear) // Set the list row background to clear
+
+                    NavigationLink(destination: DiversificationView()) {
+                        Text("Diversification")
+                    }
+                    NavigationLink(destination: QuantitativeTradingView()) {
+                        Text("Quantitative Trading")
+                    }
+                    NavigationLink(destination: StopLossView()) {
+                        Text("Stop Loss")
+                    }
+                    NavigationLink(destination: FOMOView()) {
+                        Text("FOMO")
+                    }
+                    NavigationLink(destination: LongTermInvestingView()) {
+                        Text("Long Term Investment")
+                    }
+                    NavigationLink(destination: EventDrivenTradingView()) {
+                        Text("Event-Driven Trading")
+                    }
+                }
+                .listStyle(PlainListStyle()) // Use plain list style to avoid extra padding and backgrounds
+                .background(Color.clear) // Attempt to set the background color to clear for all rows
+                .foregroundColor(.white) // Set the default text color to white for all list items
+
+
+            }
+        .environment(\.colorScheme, .dark) // This enforces dark mode for the NavigationView
+
+
+
     }
     
     private var buySellButtons: some View {

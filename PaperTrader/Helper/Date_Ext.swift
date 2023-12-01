@@ -59,7 +59,9 @@ extension Int {
 
 extension String {
     func getDate() -> Date? {
-        let dateFormatter = ISO8601DateFormatter()
-        return dateFormatter.date(from: self)
+        let dateFormatter1 = ISO8601DateFormatter()
+        dateFormatter1.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
+        let dateFormatter2 = ISO8601DateFormatter()
+        return dateFormatter1.date(from: self) ?? dateFormatter2.date(from: self)
     }
 }

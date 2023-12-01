@@ -9,6 +9,9 @@ import SwiftUI
 import FirebaseAuth
 
 struct SettingsView: View {
+    
+    @Environment(\.openURL) private var openURL
+    
     var body: some View {
         ZStack {
             DarkColorTheme.darkBackground
@@ -22,6 +25,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .analyticsScreen(name: "Settings")
     }
     
     private var header: some View {
@@ -65,9 +69,9 @@ struct SettingsView: View {
                 .padding(.vertical, 10)
             }
             .onTapGesture {
-                let mailto = "mailto:".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                let mailto = "mailto:justinblalock87@gmail.com".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                 if let url = URL(string: mailto!) {
-//                    openURL(url)
+                    openURL(url)
                 }
             }
             Divider()

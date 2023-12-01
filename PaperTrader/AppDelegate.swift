@@ -9,7 +9,16 @@ import UIKit
 import CoreData
 import FirebaseCore
 import GoogleSignIn
+import GoogleMobileAds
 
+let useRemoteServer = false
+var serverURL: String {
+    if useRemoteServer {
+        return "https://aqueous-caverns-40050-546b6de806d8.herokuapp.com/"
+    } else {
+        return "http://localhost:3000/"
+    }
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true
     }

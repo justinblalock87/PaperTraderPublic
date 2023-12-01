@@ -37,6 +37,9 @@ struct SignInView: View {
                         .cornerRadius(10)
                         .foregroundColor(.white)
                         .submitLabel(.done)
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
+                    
                     SecureField("Password", text: $password)
                         .padding()
                         .background(Color.gray.opacity(0.7))
@@ -89,6 +92,7 @@ struct SignInView: View {
             }
             .padding()
         }
+        .analyticsScreen(name: "Signin")
         .ignoresSafeArea()
     }
     

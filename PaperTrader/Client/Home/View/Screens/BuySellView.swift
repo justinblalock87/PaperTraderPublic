@@ -8,13 +8,17 @@
 import SwiftUI
 import FirebaseAnalytics
 
-var educationalContents = ["Buying stocks means you are purchasing a share of the company. When the company's value goes up, so does the value of your stock.", "Selling stocks means you are selling your share of the company. It's usually done when you believe the value might go down or to realize a profit."]
 struct BuySellView: View {
     
     @State private var quantity = "0"
-    @State private var showEducationalPopup = false
+    @State var hasTriedAd = false
+    @State var showConfirmation = false
+    @State var showAds = true
+    
     let action: String
     let stock: Stock
+    private let coordinator = InterstitialAdCoordinator()
+    private let adViewControllerRepresentable = AdViewControllerRepresentable()
     
     var dismissCallback: (() -> Void)?
     
@@ -22,19 +26,41 @@ struct BuySellView: View {
         ZStack {
             DarkColorTheme.darkBackground
                 .ignoresSafeArea()
-            VStack(spacing: 40) {
+            VStack(spacing: 0) {
                 header
                 numpad
                 confirmButton
+                    .padding(.vertical, 20)
             }
         }
-        .alert(isPresented: $showEducationalPopup, content: {
-            Alert(title: Text("Learn"), message: Text(educationalContents.randomElement() ?? educationalContents[0]), dismissButton: .cancel(Text("Got it!")))
-        })
+        .background(adViewControllerRepresentableView)
         .onAppear(perform: {
-            showEducationalPopup = true
+            Task.init {
+                do {
+                    try await coordinator.loadAd()
+                } catch {
+                    hasTriedAd = true
+                    print("error loading ad ", String(String(describing: error)))
+                }
+            }
+            showAds = (RemoteConfigListener.shared.remoteConfig["showads"].stringValue ?? "") == "true" && ((RemoteConfigListener.shared.remoteConfig["ad_type"].stringValue ?? "") == "inter" || (RemoteConfigListener.shared.remoteConfig["ad_type"].stringValue ?? "") == "both")
+        })
+        .alert(isPresented: $showConfirmation, content: {
+            Alert(title: Text("Order placed!"), message: nil, dismissButton: .default(Text("Done"), action: {
+                if !hasTriedAd && showAds {
+                    hasTriedAd = true
+                    coordinator.showAd(from: adViewControllerRepresentable.viewController)
+                } else {
+                    dismissCallback?()
+                }
+            }))
         })
         .analyticsScreen(name: "buy/sell", extraParameters: ["type": action])
+    }
+    
+    var adViewControllerRepresentableView: some View {
+      adViewControllerRepresentable
+        .frame(width: .zero, height: .zero)
     }
     
     private var header: some View {
@@ -51,7 +77,7 @@ struct BuySellView: View {
                     .padding()
                     Spacer()
                 }
-                Text(action.capitalized)
+                Text(action.capitalized + " units")
                     .font(.system(size: 22, weight: .medium, design: .rounded))
             }
             .foregroundStyle(.white)
@@ -77,22 +103,26 @@ struct BuySellView: View {
     
     private var confirmButton: some View {
         VStack {
-            Button("Confirm Order") {
+            Button(action: {
                 Analytics.logEvent("confirm_clicked", parameters: nil)
                 Task.init {
                     try? await trade()
                 }
-            }
+            }, label: {
+                Text("Confirm Order")
+                    .foregroundStyle(ColorTheme.primaryColor)
+                    .font(.system(size: 18, weight: .semibold))
+            })
         }
     }
     
     private func trade() async throws {
         if action == "buy" {
             try await StockManager.buyStock(stock: stock, quantity: Int(quantity) ?? 0)
-            dismissCallback?()
+            showConfirmation = true
         } else if action == "sell" {
             try await StockManager.sellStock(stock: stock, quantity: Int(quantity) ?? 0)
-            dismissCallback?()
+            showConfirmation = true
         }
         
     }

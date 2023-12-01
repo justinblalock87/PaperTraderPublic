@@ -13,14 +13,16 @@ class Comment {
     let id: String
     let authorID: String
     let authorUsername: String
+    let authorProfilePictureURL: String?
     let timestamp: Int
     let content: String
     let authorReliability: Int
     var likes: Int
     let likers: [String]
     let dislikers: [String]
+    let stockSymbol: String?
     
-    init(id: String, authorID: String, authorUsername: String, timestamp: Int, content: String, authorReliability: Int, likes: Int, likers: [String], dislikers: [String]) {
+    init(id: String, authorID: String, authorUsername: String, timestamp: Int, content: String, authorReliability: Int, likes: Int, likers: [String], dislikers: [String], stockSymbol: String?, profilePictureURL: String? = nil) {
         self.id = id
         self.authorID = authorID
         self.authorUsername = authorUsername
@@ -30,6 +32,8 @@ class Comment {
         self.likes = likes
         self.likers = likers
         self.dislikers = dislikers
+        self.stockSymbol = stockSymbol
+        self.authorProfilePictureURL = profilePictureURL
     }
     
     convenience init?(snapshot: DocumentSnapshot) async throws {
@@ -41,8 +45,9 @@ class Comment {
         let likes = snapshot.data()?["likes"] as? Int ?? 0
         let likers = snapshot.data()?["likers"] as? [String] ?? []
         let dislikers = snapshot.data()?["dislikers"] as? [String] ?? []
+        let stockSymbol = snapshot.data()?["stockSymbol"] as? String ?? ""
         let otherUser = try await UserManager.getUser(uid: authorID)
         
-        self.init(id: id, authorID: authorID, authorUsername: authorUsername, timestamp: timestamp, content: content, authorReliability: otherUser.reliabilityScore, likes: likes, likers: likers, dislikers: dislikers)
+        self.init(id: id, authorID: authorID, authorUsername: authorUsername, timestamp: timestamp, content: content, authorReliability: otherUser.reliabilityScore, likes: likes, likers: likers, dislikers: dislikers, stockSymbol: stockSymbol, profilePictureURL: otherUser.profilePictureURL)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 class Stock {
     
     // ex: Apple
-    let name: String
+    var name: String
     // ex: AAPL
     let symbol: String
     
@@ -22,5 +22,15 @@ class Stock {
         self.symbol = symbol
         self.price = price
         self.percentageChange = percentageChange
+    }
+}
+
+struct StockCodable: Codable {
+    let symbol: String
+    let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case symbol = "symbol"
+        case name = "name"
     }
 }

@@ -91,9 +91,14 @@ struct StockChartView: View {
     func fillPath(in size: CGSize) -> Path {
         Path { path in
             path.move(to: CGPoint(x: 0, y: size.height))
+            
             for i in 0..<viewModel.stockData.count {
+                var disparity = (self.highestPrice - self.lowestPrice)
+                if disparity <= 0 {
+                    disparity = 0.000001
+                }
                 let xPosition = size.width * CGFloat(i) / CGFloat(viewModel.stockData.count - 1)
-                let yPosition = size.height * (1 - CGFloat((viewModel.stockData[i].close - self.lowestPrice) / (self.highestPrice - self.lowestPrice)))
+                let yPosition = size.height * (1 - CGFloat((viewModel.stockData[i].close - self.lowestPrice) / disparity))
                 path.addLine(to: CGPoint(x: xPosition, y: yPosition))
             }
             path.addLine(to: CGPoint(x: size.width, y: size.height))
@@ -103,8 +108,12 @@ struct StockChartView: View {
     func strokePath(in size: CGSize) -> Path {
         Path { path in
             for i in 0..<viewModel.stockData.count {
+                var disparity = (self.highestPrice - self.lowestPrice)
+                if disparity <= 0 {
+                    disparity = 0.000001
+                }
                 let xPosition = size.width * CGFloat(i) / CGFloat(viewModel.stockData.count - 1)
-                let yPosition = size.height * (1 - CGFloat((viewModel.stockData[i].close - self.lowestPrice) / (self.highestPrice - self.lowestPrice)))
+                let yPosition = size.height * (1 - CGFloat((viewModel.stockData[i].close - self.lowestPrice) / disparity))
 
                 if i == 0 {
                     path.move(to: CGPoint(x: xPosition, y: yPosition))

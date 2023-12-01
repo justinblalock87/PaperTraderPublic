@@ -15,6 +15,9 @@ struct ProfileView: View {
     @State var newProfilePicture = UIImage()
     @State var isShowingImagePicker = false
     
+    @StateObject var portfolioVM = PortfolioViewModel()
+    @StateObject var infoVM = InfoViewModel()
+    
     var segueToAccounts: (() -> Void)?
     
     var body: some View {
@@ -40,15 +43,39 @@ struct ProfileView: View {
                     paperAccounts
                         .padding(.bottom, 30)
                     
-                    PortfolioChartView(viewModel: PortfolioViewModel())
-                        .frame(height: 200)
+                    if !portfolioVM.loading {
+                        PortfolioChartView(viewModel: portfolioVM)
+                            .frame(height: 220)
+                            .padding(.bottom, 20)
+                        
+                        Divider()
+                            .padding(.bottom, 20)
+                        
+                        PortfolioView(portfolioVM: portfolioVM)
+                    } else {
+                        LoadingIndicator()
+                    }
                 }
                 .padding(.horizontal, 20)
             }
             .task(priority: .userInitiated, {
                 currentUser = try? await UserManager.getCurrentUser()
-                try? await StockManager.fetchPortfolioHistory()
             })
+        }
+        .task {
+            portfolioVM.reload()
+        }
+        .environmentObject(infoVM)
+        .popup(isPresented: $infoVM.shouldShowInfo) {
+            InfoPopupView(infoText: infoVM.infoText, infoLink: infoVM.infoLink)
+        } customize: {
+            $0
+            .type(.floater())
+            .position(.bottom)
+            .animation(.spring())
+            .closeOnTapOutside(true)
+            .backgroundColor(.black.opacity(0.4))
+            .isOpaque(true)
         }
         .analyticsScreen(name: "Profile")
     }
@@ -60,7 +87,7 @@ struct ProfileView: View {
                     Image(uiImage: newProfilePicture)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 150, height: 150)
+                        .frame(width: 125, height: 125)
                         .cornerRadius(150)
                         .clipped()
                 } else {
@@ -71,7 +98,7 @@ struct ProfileView: View {
                                 .foregroundColor(ColorTheme.lightGray)
                         }
                         .scaledToFill()
-                        .frame(width: 150, height: 150)
+                        .frame(width: 125, height: 125)
                         .cornerRadius(150)
                         .clipped()
                 }
@@ -79,12 +106,12 @@ struct ProfileView: View {
                 Image(systemName: "pencil.circle")
                     .resizable()
                     .foregroundColor(.white)
-                    .frame(width: 30, height: 30)
+                    .frame(width: 25, height: 25)
                     .padding(8)
                     .background(ColorTheme.newGray.opacity(0.7))
                     .clipShape(Circle())
                     .padding(10)
-                    .offset(x: 50, y: -50)
+                    .offset(x: 50, y: -40)
             }
             VStack(spacing: 6) {
                 Text("\(currentUser?.name ?? "")")
@@ -101,22 +128,24 @@ struct ProfileView: View {
     }
     
     private var paperAccounts: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Divider()
             HStack(alignment: .center) {
                 Text("Active Paper Account")
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(.system(size: 16, weight: .medium))
                     .foregroundColor(.white)
                 Spacer()
-                Text("\(currentUser?.activePaperAccount ?? "")")
-                    .foregroundStyle(.gray)
-                    .font(.system(size: 14, weight: .semibold))
+                HStack(spacing: 10) {
+                    Text("\(currentUser?.activePaperAccount ?? "")")
+                        .foregroundStyle(ColorTheme.goodGray)
+                        .font(.system(size: 16, weight: .semibold))
+                    Image(systemName: "chevron.right")
+                }
             }
             .padding(.vertical, 10)
             .onTapGesture {
                 segueToAccounts?()
             }
-            .padding(.horizontal)
             Divider()
         }
     }
